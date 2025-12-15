@@ -10,7 +10,7 @@ function App() {
     <>
       <div>
 
-        <h1 className="text-4xl font-bold text-blue-500">Maple Banquet Hall</h1>
+        <h1 className="text-4xl font-bold text-yellow-500">Maple Banquet Hall</h1>
 
         
       </div>
