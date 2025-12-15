@@ -36,7 +36,7 @@ const Footer = () => {
                         <img
                             src={Logo}
                             alt="Maple Banquet Logo"
-                            className="w-35 h-34 object-contain"
+                            className="w-[660px] h-[160px] object-contain"
                         />
                         {/* <div>
                             <h3 className="text-xl font-bold text-white">Maple Banquet</h3>
