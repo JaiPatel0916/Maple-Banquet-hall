@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
 
                 <div className="flex items-center gap-3">
-                    <img src={Logo} alt="Maple Banquet Logo" className="w-12 h-12 object-contain" />
+                    {/* <img src={Logo} alt="Maple Banquet Logo" className="w-12 h-12 object-contain" /> */}
                     <h1 className="text-2xl font-bold text-[#7A1F1F]">Maple Banquet</h1>
                 </div>
 
