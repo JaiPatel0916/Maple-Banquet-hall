@@ -1,4 +1,4 @@
-// FILE: src/components/Footer.jsx
+
 
 import {
     FiMapPin,
