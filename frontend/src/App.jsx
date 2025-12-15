@@ -18,9 +18,7 @@ function App() {
       </Routes>
 
 
-      <div className="pt-20">
-        {/* Page content here */}
-      </div>
+      
 
       <Footer />
     </>

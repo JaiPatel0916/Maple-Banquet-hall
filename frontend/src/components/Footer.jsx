@@ -12,14 +12,14 @@ import Logo from "../assets/images/maple-logo.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#6e1b1b] text-white pt-20 pb-8 px-6 md:px-12 lg:px-20">
+        <footer className="bg-[#f6f2ee]  text-black pt-20 pb-8 px-6 md:px-12 lg:px-20">
 
             {/* Top Heading Section */}
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                     Ready to Plan Your Event?
                 </h2>
-                <p className="max-w-2xl mx-auto text-gray-200 mb-6">
+                <p className="max-w-2xl mx-auto text-black-200 mb-6">
                     Let us help you create an unforgettable experience. Contact us today to discuss your requirements.
                 </p>
                 <button className="bg-[#D29922] hover:bg-[#b88619] text-black font-semibold px-6 py-3 rounded-lg shadow">
@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
 
             {/* Main Footer Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-gray-200">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-black-200">
 
                 {/* Brand */}
                 <div>
@@ -44,7 +44,7 @@ const Footer = () => {
                         </div> */}
                     </div>
 
-                    <p className="text-gray-300 leading-relaxed mb-4">
+                    <p className="text-black-300 leading-relaxed mb-4">
                         Creating unforgettable moments in our elegant venue. Your perfect celebration starts here with our exceptional service and stunning ambiance.
                     </p>
 
@@ -116,12 +116,12 @@ const Footer = () => {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-gray-600 mt-14 pt-4 flex flex-col md:flex-row justify-between text-gray-300 text-sm">
+            <div className="border-t border-gray-600 mt-14 pt-4 flex flex-col md:flex-row justify-between text-black-300 text-sm">
                 <p>© 2025 Maple Banquet. All rights reserved.</p>
 
                 <div className="flex gap-6 mt-3 md:mt-0">
-                    <a href="#" className="hover:text-[#D29922]">Privacy Policy</a>
-                    <a href="#" className="hover:text-[#D29922]">Terms of Service</a>
+                    <a href="#" className="hover:text-[#D29922] text-black">Privacy Policy</a>
+                    <a href="#" className="hover:text-[#D29922] text-black">Terms of Service</a>
                 </div>
             </div>
         </footer>
