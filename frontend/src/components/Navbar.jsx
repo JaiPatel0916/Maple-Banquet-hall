@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";                  // ✅ ADDED
+import { Link } from "react-router-dom";            
 import { FiMenu, FiX, FiPhone } from "react-icons/fi";
 import Logo from "../assets/images/maple-logo.png";
 

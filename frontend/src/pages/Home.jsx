@@ -6,7 +6,7 @@ import GallerySection from "../components/Home/GallerySection";
 export default function Home() {
     return (
         <>
-            <div className="pt-20">
+            <div >
             
               <HeroSection />
               <FeaturesSection />
