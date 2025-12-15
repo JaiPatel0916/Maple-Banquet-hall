@@ -16,7 +16,7 @@ function App() {
         {/* Default route loads About page */}
         <Route path="/" element={<Home />} /> 
         <Route path="/about" element={<About />} />
-        <Route path="/hallDetails" element={<HallDetails/>} />
+        <Route path="/hall" element={<HallDetails/>} />
       </Routes>
 
 
