@@ -4,6 +4,8 @@ import FeaturesSection from "./components/Home/FeaturesSection";
 import ServicesSection from "./components/Home/ServicesSection";
 import GallerySection from "./components/Home/GallerySection";
 
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
        <ServicesSection />
        <GallerySection />
       </div>
+      <Footer />
     </>
   );
 }
