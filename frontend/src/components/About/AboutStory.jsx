@@ -6,15 +6,15 @@ import AboutImage from "../../assets/images/hall.jpg";
 
 const AboutStory = () => {
     return (
-        <section className="bg-[#f3ece5] pt-24 pb-20">
+        <section className="bg-[#FFFFFF] pt-24 pb-20">
 
             {/* Top Title Section */}
             <div className="text-center max-w-3xl mx-auto px-4">
                 <p className="text-sm tracking-widest text-[#b28a3b] font-semibold mb-2">
                     ABOUT US
-                </p>
+                </p> 
 
-                <h2 className="text-4xl md:text-5xl font-bold text-[#3b1e1e] mb-3 leading-tight">
+                <h2 className="text-4xl md:text-5xl font-bold text-black mb-3 leading-tight">
                     Where Dreams Become <br />
                     <span className="text-[#c79627] italic">Reality</span>
                 </h2>
