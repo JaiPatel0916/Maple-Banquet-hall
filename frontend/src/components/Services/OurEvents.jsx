@@ -7,8 +7,8 @@ import engagementImg from "../../assets/images/engagement.jpg";
 import birthdayImg from "../../assets/images/birthday.jpg";
 import corporateImg from "../../assets/images/corporate.jpg";
 import familyImg from "../../assets/images/family.jpg";
-import babyShowerImg from "../../assets/images/babyshower.jpg";
-//import kittyImg from "../../assets/images/kitty.jpg";
+import babyShowerImg from "../../assets/images/babyshower.png";
+import partyImg from "../../assets/images/party.png";
 import anniversaryImg from "../../assets/images/anniversary.jpg";
 
 const events = [
@@ -38,11 +38,11 @@ const events = [
     desc: "Celebrate the upcoming arrival with an elegant baby shower.",
     image: babyShowerImg,
   },
- /* {
+  {
     title: "Kitty Parties",
     desc: "Perfect place for fun social get-togethers with friends.",
-    image: kittyImg,
-  },*/
+    image: partyImg,
+  },
   {
     title: "Anniversary Celebrations",
     desc: "Mark milestones with intimate or grand celebrations.",
