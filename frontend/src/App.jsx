@@ -4,10 +4,11 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import HallDetails from "./pages/HallDetails";
-
 import Services from "./pages/Services";
+
 import OutdoorCatering from "./pages/OutdoorCatering";
 import Packages from "./pages/Packages";
+import Gallery from "./pages/Gallery";
 
 
 function App() {
@@ -30,10 +31,12 @@ function App() {
 
         <Route path="/hall" element={<HallDetails />} />
         <Route path="/packages" element={<Packages />} />
+
+        <Route path="/Gallery" element={< Gallery />} />
+
         <Route path="/outdoor-catering" element={<OutdoorCatering />} />
 
       </Routes>
-
       {!shouldHideFooter && <Footer />}
     </>
   );
