@@ -14,7 +14,7 @@ function App() {
   const location = useLocation();
 
   // ❌ Footer should NOT appear on Packages page
-  const hideFooterRoutes = ["/packages"];
+  const hideFooterRoutes = ["/packages","/outdoor-catering"];
   const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
 
   return (
