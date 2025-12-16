@@ -6,7 +6,7 @@ import About from "./pages/About";
 import HallDetails from "./pages/HallDetails";
 
 import Services from "./pages/Services";
-
+import OutdoorCatering from "./pages/OutdoorCatering";
 import Packages from "./pages/Packages";
 
 
@@ -30,6 +30,7 @@ function App() {
 
         <Route path="/hall" element={<HallDetails />} />
         <Route path="/packages" element={<Packages />} />
+        <Route path="/outdoor-catering" element={<OutdoorCatering />} />
 
       </Routes>
 
