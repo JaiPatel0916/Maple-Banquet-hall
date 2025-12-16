@@ -5,7 +5,11 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import HallDetails from "./pages/HallDetails";
+
+import Services from "./pages/Services";
+
 import Packages from "./pages/Packages";
+
 
 function App() {
   const location = useLocation();
@@ -21,8 +25,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+
+       
+        <Route path="/services" element={<Services/>} />
+
         <Route path="/hall" element={<HallDetails />} />
         <Route path="/packages" element={<Packages />} />
+
       </Routes>
 
       {!shouldHideFooter && <Footer />}
