@@ -5,7 +5,7 @@ const facilities = [
   {
     title: "In-House Catering",
     desc: "Delicious multi-cuisine menu options",
-    icon: "🍽️",
+    icon: "🍴",
   },
   {
     title: "Sound System",
@@ -15,12 +15,12 @@ const facilities = [
   {
     title: "Décor Services",
     desc: "Customizable event decorations",
-    icon: "🌸",
+    icon: "🌼",
   },
   {
     title: "Photo Zones",
     desc: "Beautiful backdrops for memories",
-    icon: "📸",
+    icon: "📷",
   },
   {
     title: "Parking",
@@ -36,42 +36,42 @@ const facilities = [
 
 const FacilitiesSection = () => {
   return (
-    <section className="bg-[#f6f2ee] py-28">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-[#f6f2ee] py-[80px]">
+      <div className="mx-auto max-w-[1320px] px-6">
 
-        {/* Heading */}
-        <div className="mb-16 text-center">
-          <p className="text-[11px] uppercase tracking-[0.25em] font-semibold text-[#d4a43c]">
+        {/* Heading (reduced spacing) */}
+        <div className="mb-[48px] text-center">
+          <p className="text-[11px] uppercase tracking-[0.28em] font-semibold text-[#d4a43c]">
             Facilities
           </p>
-          <h2 className="mt-4 text-4xl md:text-5xl font-serif font-bold text-gray-900">
+          <h2 className="mt-3 text-[40px] md:text-[48px] font-serif font-semibold text-[#1c1c1c]">
             Everything You Need
           </h2>
         </div>
 
-        {/* Facilities Cards */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-6 h-60px">
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-[24px]">
           {facilities.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.06 }}
               viewport={{ once: true }}
-              className="rounded-2xl bg-white px-6 py-10 text-center shadow-sm hover:shadow-md transition"
+              className="bg-white rounded-[16px] px-5 pt-7 pb-6 text-center shadow-[0_8px_24px_rgba(0,0,0,0.05)]"
             >
-              {/* Icon Circle */}
-              <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#faf3e0] text-2xl">
+              {/* Icon */}
+              <div className="mx-auto mb-4 flex h-[48px] w-[48px] items-center justify-center rounded-full bg-[#fbf3e3] text-[20px] text-[#d4a43c]">
                 {item.icon}
               </div>
 
               {/* Title */}
-              <h3 className="font-serif text-base font-semibold text-gray-900">
+              <h3 className="font-serif text-[14.5px] font-semibold text-[#1c1c1c]">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="mt-2 text-sm text-gray-600">
+              <p className="mt-1.5 text-[12.5px] leading-[1.55] text-[#6b6b6b]">
                 {item.desc}
               </p>
             </motion.div>
