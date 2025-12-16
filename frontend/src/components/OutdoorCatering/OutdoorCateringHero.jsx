@@ -5,7 +5,7 @@ const OutdoorCateringHero = () => {
         <section className="relative h-[50vh]  min-h-[360px] w-full overflow-hidden">
 
             {/* Background Gradient */}
-            <div className="absolute inset-0 bg-[#f6f2ee] " />
+            <div className="absolute inset-0 bg-[#FFFFF] " />
 
             {/* Content */}
             <div className="relative z-10 flex h-full items-center justify-center px-4 text-center">

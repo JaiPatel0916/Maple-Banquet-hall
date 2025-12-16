@@ -7,8 +7,8 @@ const OutdoorCatering = () => {
     return (
         <div >
             <OutdoorCateringHero />
-            <MenuBuilder />
             <HowItWorks />
+            <MenuBuilder />
             <OutdoorFooter/>
           
         </div>
