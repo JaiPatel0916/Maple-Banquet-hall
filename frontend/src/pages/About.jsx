@@ -7,8 +7,6 @@ export default function About() {
             <div >
                 <AboutStory />
                 <AboutValues />
-
-              
             </div>
         </>
     );

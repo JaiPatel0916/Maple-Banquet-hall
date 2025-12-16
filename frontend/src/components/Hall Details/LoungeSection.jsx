@@ -6,7 +6,7 @@ export default function LoungeSection() {
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-14 lg:grid-cols-2">
-          {/* Left Content */}
+        
           <div>
             <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#d4a43c]">
               Lounge
