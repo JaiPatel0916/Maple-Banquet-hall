@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import OutdoorCatering from "./pages/OutdoorCatering";
 import Packages from "./pages/Packages";
 import Gallery from "./pages/Gallery";
+import Contact from "./pages/Contact";
 
 
 function App() {
@@ -20,22 +21,16 @@ function App() {
 
   return (
     <>
-      <Navbar />
-
+    <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-
-       
         <Route path="/services" element={<Services/>} />
-
         <Route path="/hall" element={<HallDetails />} />
         <Route path="/packages" element={<Packages />} />
-
         <Route path="/Gallery" element={< Gallery />} />
-
         <Route path="/outdoor-catering" element={<OutdoorCatering />} />
-
+        <Route path="/contact" element={< Contact />} />
       </Routes>
       {!shouldHideFooter && <Footer />}
     </>

@@ -14,5 +14,4 @@ const OutdoorCatering = () => {
         </div>
     );
 };
-
 export default OutdoorCatering;
