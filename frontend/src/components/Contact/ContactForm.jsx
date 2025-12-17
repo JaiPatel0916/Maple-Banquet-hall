@@ -11,7 +11,6 @@ const ContactSection = () => {
     <section className="bg-[#FFFFFF] py-[80px]">
       <div className="mx-auto max-w-[1320px] px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
 
-  
         <div className="bg-[#fffaf6] rounded-2xl p-6 md:p-10 shadow-sm">
           <h3 className="text-[22px] font-serif font-semibold mb-6">
             Send an Inquiry
