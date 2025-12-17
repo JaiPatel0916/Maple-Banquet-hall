@@ -9,6 +9,8 @@ import OutdoorCatering from "./pages/OutdoorCatering";
 import Packages from "./pages/Packages";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import Founder from "./pages/Founder";
+
 
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
         <Route path="/Gallery" element={< Gallery />} />
         <Route path="/outdoor-catering" element={<OutdoorCatering />} />
         <Route path="/contact" element={< Contact />} />
+        <Route path="/founder" element={<Founder />} />
       </Routes>
       {!shouldHideFooter && <Footer />}
     </>
