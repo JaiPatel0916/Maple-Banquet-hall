@@ -1,7 +1,6 @@
 import OutdoorCateringHero from "../components/OutdoorCatering/OutdoorCateringHero";
 import HowItWorks from "../components/OutdoorCatering/HowItWorks";
 import OutdoorFooter from "../components/OutdoorCatering/OutdoorFooter";
-
 import StepWrapper from "../components/OutdoorCatering/StepWrapper";
 import GuestStep from "../components/OutdoorCatering/GuestStep";
 import MenuStep from "../components/OutdoorCatering/MenuStep";
