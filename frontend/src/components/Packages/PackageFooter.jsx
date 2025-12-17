@@ -7,6 +7,7 @@ import {
 
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import Logo from "../../../src/assets/images/maple-logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -63,14 +64,14 @@ const Footer = () => {
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Quick Links</h3>
                     <ul className="space-y-2">
-                        <li><a href="/" className="hover:text-[#D29922]">Home</a></li>
-                        <li><a href="/about" className="hover:text-[#D29922]">About Us</a></li>
-                        <li><a href="/hall" className="hover:text-[#D29922]">Hall Details</a></li>
-                        <li><a href="/services" className="hover:text-[#D29922]">Services</a></li>
-                        <li><a href="/gallery" className="hover:text-[#D29922]">Gallery</a></li>
-                        <li><a href="/outdoor-catering" className="hover:text-[#D29922]">Outdoor Catering</a></li>
-                        <li><a href="/packages" className="hover:text-[#D29922]">Packages</a></li>
-                        <li><a href="/contact" className="hover:text-[#D29922]">Contact</a></li>
+                        <li><Link to="/" className="hover:text-[#D29922]">Home</Link></li>
+                        <li><Link to="/about" className="hover:text-[#D29922]">About Us</Link></li>
+                        <li><Link to="/hall" className="hover:text-[#D29922]">Hall Details</Link></li>
+                        <li><Link to="/services" className="hover:text-[#D29922]">Services</Link></li>
+                        <li><Link to="/gallery" className="hover:text-[#D29922]">Gallery</Link></li>
+                        <li><Link to="/outdoor-catering" className="hover:text-[#D29922]">Outdoor Catering</Link></li>
+                        <li><Link to="/packages" className="hover:text-[#D29922]">Packages</Link></li>
+                        <li><Link to="/contact" className="hover:text-[#D29922]">Contact</Link></li>
                     </ul>
                 </div>
 
