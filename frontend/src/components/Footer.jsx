@@ -62,25 +62,27 @@ const Footer = () => {
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Quick Links</h3>
                     <ul className="space-y-2">
-                        <li><a href="#" className="hover:text-[#D29922]">Home</a></li>
-                        <li><a href="#about" className="hover:text-[#D29922]">About Us</a></li>
-                        <li><a href="#hall" className="hover:text-[#D29922]">Hall Details</a></li>
-                        <li><a href="#services" className="hover:text-[#D29922]">Services</a></li>
-                        <li><a href="#gallery" className="hover:text-[#D29922]">Gallery</a></li>
-                        <li><a href="#packages" className="hover:text-[#D29922]">Packages</a></li>
-                        <li><a href="#contact" className="hover:text-[#D29922]">Contact</a></li>
+                        <li><a href="/" className="hover:text-[#D29922]">Home</a></li>
+                        <li><a href="/about" className="hover:text-[#D29922]">About Us</a></li>
+                        <li><a href="/hall" className="hover:text-[#D29922]">Hall Details</a></li>
+                        <li><a href="/services" className="hover:text-[#D29922]">Services</a></li>
+                        <li><a href="/gallery" className="hover:text-[#D29922]">Gallery</a></li>
+                        <li><a href="/outdoor-catering" className="hover:text-[#D29922]">Outdoor Catering</a></li>
+                        <li><a href="/packages" className="hover:text-[#D29922]">Packages</a></li>
+                        <li><a href="/contact" className="hover:text-[#D29922]">Contact</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Our Services</h3>
                     <ul className="space-y-2">
-                        <li>Wedding Celebrations</li>
+                        <li>Kitty Parties</li>
                         <li>Engagement Ceremonies</li>
+                        <li>Baby Shower</li>
                         <li>Birthday Parties</li>
                         <li>Corporate Events</li>
                         <li>Family Reunions</li>
-                        <li>Kitty Parties</li>
+                        <li>Wedding Celebrations</li>
                     </ul>
                 </div>
 

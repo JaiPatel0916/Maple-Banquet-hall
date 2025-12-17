@@ -13,7 +13,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   const location = useLocation();
-  const hideFooterRoutes = ["/packages","/outdoor-catering"];
+  const hideFooterRoutes = ["/packages","/outdoor-catering","/contact"];
   const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
 
   return (
