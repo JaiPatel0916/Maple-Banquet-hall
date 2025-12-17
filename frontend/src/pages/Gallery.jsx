@@ -7,8 +7,7 @@ export default function Gallery() {
             <div >
             
               <GalleryHeader/>
-              <GalleryGrid/>
-                
+              <GalleryGrid/> 
             </div>
         </>
     );

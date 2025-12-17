@@ -26,6 +26,8 @@ const Footer = () => {
                 </button>
             </div>
 
+
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-black-200">
                 <div>
                     <div className="flex items-center gap-3 mb-4">

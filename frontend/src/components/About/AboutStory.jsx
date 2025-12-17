@@ -1,4 +1,3 @@
-// FILE: src/components/About/AboutStory.jsx
 
 import { FiCheckCircle } from "react-icons/fi";
 import AboutImage from "../../assets/images/hall.jpg";
@@ -8,7 +7,7 @@ const AboutStory = () => {
     return (
         <section className="bg-[#FFFFFF] pt-24 pb-20">
 
-            {/* Top Title Section */}
+            
             <div className="text-center max-w-3xl mx-auto px-4">
                 <p className="text-sm tracking-widest text-[#b28a3b] font-semibold mb-2">
                     ABOUT US
@@ -25,10 +24,10 @@ const AboutStory = () => {
                 </p>
             </div>
 
-            {/* Main Content Section */}
+         =
             <div className="max-w-7xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-4 md:px-8">
 
-                {/* Left Image */}
+               
                 <div className="relative">
                     <img
                         src={AboutImage}
@@ -43,7 +42,7 @@ const AboutStory = () => {
                     </div>
                 </div>
 
-                {/* Right Content */}
+                
                 <div>
                     <p className="text-sm tracking-widest text-[#b28a3b] font-semibold mb-2">
                         OUR STORY
@@ -65,7 +64,6 @@ const AboutStory = () => {
                         and all your special occasions.
                     </p>
 
-                    {/* Bullet Points */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
                         <div className="flex items-start gap-3">

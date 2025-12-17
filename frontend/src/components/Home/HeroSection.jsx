@@ -8,11 +8,8 @@ export default function HeroSection() {
       style={{ backgroundImage: `url(${heroImage})` }}
     >
       <div className="absolute inset-0 bg-black/50 z-0" />
-
-      {/* content */}
       <div className="relative z-10 flex min-h-[calc(100vh-72px)] flex-col items-center justify-center px-6 text-center text-white">
 
-        {/* Heading */}
         <h1 className="text-4xl font-light md:text-6xl">
           Create{" "}
           <span className="font-serif italic text-[#d4a43c]">
@@ -21,13 +18,13 @@ export default function HeroSection() {
           <br />
           <span className="font-serif font-semibold">Moments</span>
         </h1>
-
-        {/* Subheading */}
         <p className="mt-6 max-w-3xl text-base text-gray-200 md:text-lg">
           Experience elegance and luxury at Maple Banquet. The perfect venue for
           weddings, celebrations, and corporate events with exceptional service.
         </p>
 
+
+    
 
         <div className="mt-8 flex gap-4 xs-center">
           <button className="rounded-md bg-[#d4a43c] px-6 py-3 font-semibold text-black transition hover:bg-[#c29635] xs-full">
@@ -38,6 +35,7 @@ export default function HeroSection() {
             Explore Venue
           </button>
         </div>
+
 
         <div className="mt-14 grid grid-cols-1 gap-8 text-[#d4a43c] sm:grid-cols-3">
           <div>

@@ -32,16 +32,15 @@ const Navbar = () => {
 
   return (
     <>
-      {/* NAVBAR */}
+    
       <nav className="fixed top-0 left-0 w-full h-[72px] bg-[#F7F2EE] z-[10000] shadow-md">
         <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
 
-          {/* LOGO */}
           <h1 className="text-xl md:text-2xl font-bold text-[#7A1F1F]">
             Maple Banquet
           </h1>
 
-          {/* DESKTOP */}
+    
           <div className="hidden lg:flex items-center gap-8">
             {menuItems.map((item) => (
               <Link
@@ -64,7 +63,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* MOBILE BUTTON */}
           <button
             className="lg:hidden text-3xl"
             onClick={() => setOpen(!open)}
@@ -74,7 +72,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* MOBILE MENU */}
       {open && (
         <div
           ref={menuRef}
@@ -98,8 +95,6 @@ const Navbar = () => {
           </div>
         </div>
       )}
-
-      {/* SPACER */}
       <div className="h-[72px]" />
     </>
   );
