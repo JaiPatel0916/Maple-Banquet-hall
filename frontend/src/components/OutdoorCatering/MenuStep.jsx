@@ -17,7 +17,6 @@ const MenuStep = () => {
                 Select Your Menu
             </h2>
 
-            {/* Categories */}
             <div className="flex gap-2 justify-center flex-wrap mb-10 px-4">
                 {categories.map((cat) => (
                     <button
@@ -34,7 +33,6 @@ const MenuStep = () => {
                 ))}
             </div>
 
-            {/* Menu Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 max-w-7xl mx-auto px-4">
                 {MENU_DATA[active].map((item) => {
                     const selected = selectedItems.some(
@@ -53,7 +51,6 @@ const MenuStep = () => {
             </div>
 
 
-            {/* Bottom Bar */}
             <div className="mt-14 flex justify-between items-center max-w-6xl mx-auto px-4">
                 <button
                     onClick={() => setStep(1)}

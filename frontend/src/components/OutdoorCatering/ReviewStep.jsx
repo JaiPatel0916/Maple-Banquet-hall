@@ -38,28 +38,28 @@ const ReviewStep = () => {
         <section className="bg-[#FFFFFF] py-20 px-4">
             <div className="max-w-5xl mx-auto text-center">
 
-                {/* Icon */}
+          
                 <div className="flex justify-center mb-4">
                     <div className="h-14 w-14 rounded-full bg-green-100 flex items-center justify-center">
                         <CheckCircle className="text-green-600" size={28} />
                     </div>
                 </div>
 
-                {/* Heading */}
+             
                 <h2 className="text-3xl font-serif mb-10">
                     Your Selection is Ready!
                 </h2>
 
-                {/* CARD */}
+              
                 <div className="bg-white rounded-2xl shadow-lg px-6 py-8 max-w-3xl mx-auto">
 
-                    {/* Guest Count */}
+                
                     <div className="flex justify-between text-sm mb-6">
                         <span className="text-gray-600">Guests</span>
                         <span className="font-medium">{guestRange}</span>
                     </div>
 
-                    {/* Selected Items */}
+                    
                     <div className="border-t border-b py-4 mb-6 max-h-64 overflow-y-auto text-left space-y-3">
                         {selectedItems.map((item) => (
                             <div
@@ -77,7 +77,7 @@ const ReviewStep = () => {
                         ))}
                     </div>
 
-                    {/* WhatsApp Button */}
+                   
                     <button
                         onClick={handleWhatsAppEnquiry}
                         disabled={!guestRange || selectedItems.length === 0}
@@ -86,7 +86,7 @@ const ReviewStep = () => {
                         Enquire on WhatsApp
                     </button>
 
-                    {/* Actions */}
+                   
                     <div className="flex flex-col sm:flex-row gap-3">
                         <button
                             onClick={() => setStep(2)}

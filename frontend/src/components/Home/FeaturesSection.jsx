@@ -51,7 +51,7 @@ export default function FeaturesSection() {
   return (
     <section className="bg-[#f6f2ee] py-20">
       <div className="mx-auto max-w-7xl px-6">
-        {/* Header */}
+      
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#d4a43c]">
             Why Choose Us
@@ -65,7 +65,7 @@ export default function FeaturesSection() {
           </p>
         </div>
 
-        {/* Feature Cards */}
+
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <div

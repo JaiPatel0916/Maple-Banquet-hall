@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// Import images from assets
+
 import hall from "../../assets/images/hall.jpg";
 import hall1 from "../../assets/images/hall-1.jpg";
 import hall2 from "../../assets/images/hall-2.jpg";
@@ -45,7 +45,6 @@ const GalleryGrid = () => {
     <section className="bg-white py-[70px]">
       <div className="mx-auto max-w-[1320px] px-6">
 
-        {/* Filter Buttons */}
         <div className="mb-12 flex flex-wrap justify-center gap-3">
           {filters.map((filter) => (
             <button
@@ -63,7 +62,6 @@ const GalleryGrid = () => {
           ))}
         </div>
 
-        {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredImages.map((item, index) => (
             <div

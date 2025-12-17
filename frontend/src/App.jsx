@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import HallDetails from "./pages/HallDetails";
 import Services from "./pages/Services";
-
 import OutdoorCatering from "./pages/OutdoorCatering";
 import Packages from "./pages/Packages";
 import Gallery from "./pages/Gallery";
@@ -14,8 +13,6 @@ import Contact from "./pages/Contact";
 
 function App() {
   const location = useLocation();
-
-  // ❌ Footer should NOT appear on Packages page
   const hideFooterRoutes = ["/packages","/outdoor-catering"];
   const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
 

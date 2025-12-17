@@ -62,7 +62,6 @@ export default function GallerySection() {
           </div>
         </div>
 
-        {/* Button */}
         <div className="mt-10 text-center">
           <button className="rounded-md bg-[#d4a43c] px-6 py-3 text-sm font-semibold text-black transition hover:bg-[#c29635]">
             View Full Gallery

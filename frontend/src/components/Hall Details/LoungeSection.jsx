@@ -28,7 +28,6 @@ export default function LoungeSection() {
             </p>
           </div>
 
-          {/* Right Image */}
           <div className="overflow-hidden rounded-2xl shadow-lg">
             <img
               src={loungeImg}
