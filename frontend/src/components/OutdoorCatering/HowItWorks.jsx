@@ -18,7 +18,6 @@ const steps = [
     },
 ];
 
-// Container animation (stagger children)
 const containerVariants = {
     hidden: {},
     visible: {
@@ -28,7 +27,6 @@ const containerVariants = {
     },
 };
 
-// Each card animation
 const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -43,7 +41,7 @@ const HowItWorks = () => {
         <section className="bg-[#f6f2ee] py-24">
             <div className="mx-auto max-w-6xl px-6">
 
-                {/* Heading */}
+          
                 <motion.h2
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -53,8 +51,6 @@ const HowItWorks = () => {
                 >
                     How It Works
                 </motion.h2>
-
-                {/* Steps */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -68,17 +64,16 @@ const HowItWorks = () => {
                             variants={itemVariants}
                             className="flex flex-col items-center"
                         >
-                            {/* Number */}
+                          
                             <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#f6ead5] text-[#d29922] font-semibold">
                                 {item.step}
                             </div>
 
-                            {/* Title */}
+ 
                             <h3 className="mb-3 text-lg font-semibold text-[#6e1b1b]">
                                 {item.title}
                             </h3>
 
-                            {/* Description */}
                             <p className="text-sm text-gray-600 leading-relaxed max-w-xs">
                                 {item.desc}
                             </p>

@@ -1,5 +1,3 @@
-// FILE: src/components/Packages/PackagesCards.jsx
-
 import { FiCheck } from "react-icons/fi";
 import { FaCrown, FaStar } from "react-icons/fa";
 import { Sparkles } from "lucide-react";
@@ -75,19 +73,19 @@ const PackagesCards = () => {
                                 : "bg-white shadow-lg hover:-translate-y-2"
                             }`}
                     >
-                        {/* Most Popular Badge */}
+                       
                         {pkg.popular && (
                             <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#d29922] text-black px-4 py-1 rounded-full text-sm font-semibold">
                                 Most Popular
                             </span>
                         )}
 
-                        {/* Icon */}
+                      
                         <div className="w-14 h-14 rounded-full bg-[#f9eac7] flex items-center justify-center mb-6">
                             {pkg.icon}
                         </div>
 
-                        {/* Title */}
+                       
                         <h3 className="text-2xl font-bold mb-2">
                             {pkg.name}
                         </h3>
@@ -96,7 +94,7 @@ const PackagesCards = () => {
                             {pkg.desc}
                         </p>
 
-                        {/* Price */}
+                     
                         <div className="mb-6">
                             <span className={`text-4xl font-bold ${pkg.popular ? "text-[#d29922]" : "text-black"}`}>
                                 {pkg.price}
@@ -106,7 +104,7 @@ const PackagesCards = () => {
                             </span>
                         </div>
 
-                        {/* Features */}
+                    
                         <ul className="space-y-3 mb-8">
                             {pkg.features.map((feature, i) => (
                                 <li key={i} className="flex items-start gap-3">
@@ -118,7 +116,6 @@ const PackagesCards = () => {
                             ))}
                         </ul>
 
-                        {/* Button */}
                         <button
                             className={`w-full py-3 rounded-lg font-semibold transition
                 ${pkg.popular

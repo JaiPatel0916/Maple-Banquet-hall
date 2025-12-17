@@ -23,6 +23,7 @@ export default function HeroSection() {
           weddings, celebrations, and corporate events with exceptional service.
         </p>
 
+
     
 
         <div className="mt-8 flex gap-4 xs-center">

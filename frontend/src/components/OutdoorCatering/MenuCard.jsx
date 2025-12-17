@@ -1,5 +1,3 @@
-// FILE: src/components/OutdoorCatering/MenuCard.jsx
-
 const MenuCard = ({ item, selected, onToggle }) => {
     return (
         <div
@@ -9,14 +7,13 @@ const MenuCard = ({ item, selected, onToggle }) => {
                     : "border-gray-200 hover:shadow-sm"
                 }`}
         >
-            {/* Image */}
+          
             <img
                 src={item.image}
                 alt={item.name}
                 className="h-32 sm:h-36 w-full object-cover"
             />
 
-            {/* Content */}
             <div className="p-3 text-center">
                 <h4 className="text-sm font-medium leading-snug">
                     {item.name}

@@ -22,7 +22,6 @@ const amenities = [
   { icon: Sparkles, label: "Stage Setup" },
 ];
 
-// Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -46,7 +45,7 @@ export default function AmenitiesSection() {
   return (
     <section className="bg-[#f6f2ee] py-24">
       <div className="mx-auto max-w-7xl px-6">
-        {/* Heading */}
+   
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,8 +60,6 @@ export default function AmenitiesSection() {
             What We Offer
           </h2>
         </motion.div>
-
-        {/* Animated Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"

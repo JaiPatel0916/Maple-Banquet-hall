@@ -26,10 +26,9 @@ const Footer = () => {
                 </button>
             </div>
 
-        
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-black-200">
 
-                {/* Brand */}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-black-200">
                 <div>
                     <div className="flex items-center gap-3 mb-4">
                         <img
@@ -47,7 +46,6 @@ const Footer = () => {
                         Creating unforgettable moments in our elegant venue. Your perfect celebration starts here with our exceptional service and stunning ambiance.
                     </p>
 
-                    {/* Social Icons */}
                     <div className="flex gap-4 mt-4">
                         <a href="#" className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition">
                             <FaFacebookF size={18} />
@@ -61,7 +59,6 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Quick Links */}
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Quick Links</h3>
                     <ul className="space-y-2">
@@ -75,7 +72,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Services */}
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Our Services</h3>
                     <ul className="space-y-2">
@@ -88,7 +84,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Contact */}
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Contact Us</h3>
 
@@ -114,7 +109,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Bottom Bar */}
             <div className="border-t border-gray-600 mt-14 pt-4 flex flex-col md:flex-row justify-between text-black-300 text-sm">
                 <p>© 2025 Maple Banquet. All rights reserved.</p>
 

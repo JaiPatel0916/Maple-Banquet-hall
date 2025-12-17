@@ -6,7 +6,7 @@ export default function GrandHallSection() {
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-14 lg:grid-cols-2">
-          {/* Left Content */}
+       
           <div>
             <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#d4a43c]">
               Grand Hallroom
@@ -30,7 +30,6 @@ export default function GrandHallSection() {
               corporate gala, our grand hall sets the perfect stage.
             </p>
 
-            {/* Stats */}
             <div className="mt-10 grid grid-cols-2 gap-6">
               <div className="rounded-xl bg-[#f6f2ee] p-6">
                 <h3 className="text-3xl font-bold text-[#d4a43c]">200+</h3>
@@ -48,7 +47,6 @@ export default function GrandHallSection() {
             </div>
           </div>
 
-          {/* Right Image */}
           <div className="overflow-hidden rounded-2xl shadow-lg">
             <img
               src={grandHallImg}
