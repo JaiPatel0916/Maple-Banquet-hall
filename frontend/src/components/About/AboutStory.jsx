@@ -24,7 +24,7 @@ const AboutStory = () => {
                 </p>
             </div>
 
-         =
+         
             <div className="max-w-7xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-4 md:px-8">
 
                
