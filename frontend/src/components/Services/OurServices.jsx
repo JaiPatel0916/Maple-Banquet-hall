@@ -6,7 +6,6 @@ const ServicesHeader = () => {
     <section className="bg-[#f6f2ee] py-28">
       <div className="mx-auto max-w-5xl px-6 text-center">
         
-        {/* Small Top Label */}
         <motion.p
           initial={{ opacity: 0, y: -8 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +16,6 @@ const ServicesHeader = () => {
           Our Services
         </motion.p>
 
-        {/* Main Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,7 +29,6 @@ const ServicesHeader = () => {
           </span>
         </motion.h1>
 
-        {/* Description */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

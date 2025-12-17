@@ -27,8 +27,6 @@ const ContactHeader = () => {
             Event
           </span>
         </motion.h2>
-
-        {/* Description */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

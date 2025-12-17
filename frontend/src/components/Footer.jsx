@@ -14,7 +14,6 @@ const Footer = () => {
     return (
         <footer className="bg-[#f6f2ee]  text-black pt-20 pb-8 px-6 md:px-12 lg:px-20">
 
-            {/* Top Heading Section */}
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                     Ready to Plan Your Event?
@@ -27,7 +26,7 @@ const Footer = () => {
                 </button>
             </div>
 
-            {/* Main Footer Grid */}
+        
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-black-200">
 
                 {/* Brand */}

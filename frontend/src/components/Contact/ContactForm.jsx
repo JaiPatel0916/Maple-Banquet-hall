@@ -10,7 +10,6 @@ const ContactSection = () => {
   return (
     <section className="bg-[#f6f2ee] py-[80px]">
       <div className="mx-auto max-w-[1320px] px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
-        {/* LEFT – FORM */}
         <div className="bg-[#fffaf6] rounded-2xl p-10 shadow-sm">
           <h3 className="text-[22px] font-serif font-semibold mb-6">
             Send an Inquiry
@@ -102,7 +101,6 @@ const ContactSection = () => {
           </form>
         </div>
 
-        {/* RIGHT – GET IN TOUCH */}
         <div>
           <h3 className="text-[22px] font-serif font-semibold mb-4">
             Get in Touch
@@ -114,7 +112,6 @@ const ContactSection = () => {
 
           <div className="space-y-4">
 
-            {/* Phone */}
             <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
                 <Phone size={18} className="text-[#d4a43c]" />
@@ -128,7 +125,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Email */}
             <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
                 <Mail size={18} className="text-[#d4a43c]" />
@@ -144,7 +140,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Address */}
+  
             <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
                 <MapPin size={18} className="text-[#d4a43c]" />
@@ -160,7 +156,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Timings */}
             <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
                 <Clock size={18} className="text-[#d4a43c]" />
