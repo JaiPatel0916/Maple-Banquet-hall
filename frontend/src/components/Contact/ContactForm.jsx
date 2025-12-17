@@ -8,7 +8,7 @@ import {
 
 const ContactSection = () => {
   return (
-    <section className="bg-[#f6f2ee] py-[80px]">
+    <section className="bg-[#FFFFFF] py-[80px]">
       <div className="mx-auto max-w-[1320px] px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
         {/* LEFT – FORM */}
         <div className="bg-[#fffaf6] rounded-2xl p-10 shadow-sm">
