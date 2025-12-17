@@ -4,17 +4,15 @@ import heroImage from "../../assets/images/hero-banquet.jpg";
 export default function HeroSection() {
   return (
     <section
-      className="relative h-screen w-full bg-cover bg-center"
-      style={{
-        backgroundImage:
-          `url(${heroImage})`,// change path if needed
-      }}
+      className="relative min-h-[calc(100vh-72px)] bg-cover bg-center"
+      style={{ backgroundImage: `url(${heroImage})` }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      {/* overlay must be BELOW navbar */}
+      <div className="absolute inset-0 bg-black/50 z-0" />
 
-      {/* Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
+      {/* content */}
+      <div className="relative z-10 flex min-h-[calc(100vh-72px)] flex-col items-center justify-center px-6 text-center text-white">
+
         {/* Heading */}
         <h1 className="text-4xl font-light md:text-6xl">
           Create{" "}
@@ -32,15 +30,17 @@ export default function HeroSection() {
         </p>
 
         {/* Buttons */}
-        <div className="mt-8 flex flex-wrap gap-4">
-          <button className="rounded-md bg-[#d4a43c] px-6 py-3 font-semibold text-black transition hover:bg-[#c29635]">
+
+        <div className="mt-8 flex gap-4 xs-center">
+          <button className="rounded-md bg-[#d4a43c] px-6 py-3 font-semibold text-black transition hover:bg-[#c29635] xs-full">
             Book Your Event
           </button>
 
-          <button className="rounded-md border-2 border-[#d4a43c] px-6 py-3 font-semibold text-[#d4a43c] transition hover:bg-[#d4a43c] hover:text-black">
+          <button className="rounded-md border-2 border-[#d4a43c] px-6 py-3 font-semibold text-[#d4a43c] transition hover:bg-[#d4a43c] hover:text-black xs-full">
             Explore Venue
           </button>
         </div>
+
 
         {/* Stats */}
         <div className="mt-14 grid grid-cols-1 gap-8 text-[#d4a43c] sm:grid-cols-3">
