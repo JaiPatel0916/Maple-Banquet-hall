@@ -1,10 +1,7 @@
-// FILE: src/components/OutdoorCatering/OutdoorCateringHero.jsx
-
 const OutdoorCateringHero = () => {
     return (
         <section className="relative h-[50vh]  min-h-[360px] w-full overflow-hidden">
 
-            {/* Background Gradient */}
             <div className="absolute inset-0 bg-[#FFFFF] " />
 
             {/* Content */}

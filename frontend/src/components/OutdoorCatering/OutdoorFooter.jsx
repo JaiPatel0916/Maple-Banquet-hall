@@ -1,5 +1,3 @@
-
-
 import {
     FiMapPin,
     FiPhone,
@@ -62,7 +60,6 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Quick Links */}
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Quick Links</h3>
                     <ul className="space-y-2">
@@ -76,7 +73,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Services */}
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Our Services</h3>
                     <ul className="space-y-2">
@@ -89,7 +85,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Contact */}
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Contact Us</h3>
 
@@ -115,7 +110,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Bottom Bar */}
             <div className="border-t border-gray-600 mt-14 pt-4 flex flex-col md:flex-row justify-between text-black-300 text-sm">
                 <p>© 2025 Maple Banquet. All rights reserved.</p>
 

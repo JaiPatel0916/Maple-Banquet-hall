@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+
+
 import weddingImg from "../../assets/images/wedding.jpeg";
 import engagementImg from "../../assets/images/engagement.jpg";
 import birthdayImg from "../../assets/images/birthday.jpg";
@@ -68,6 +70,7 @@ const OurEvents = () => {
           </h2>
         </div>
 
+
   
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {events.map((event, i) => (
@@ -79,6 +82,7 @@ const OurEvents = () => {
               viewport={{ once: true }}
               className="group overflow-hidden rounded-xl bg-[#faf8f5] shadow-sm"
             >
+
               <div className="h-44 overflow-hidden">
                 <img
                   src={event.image}
@@ -86,6 +90,7 @@ const OurEvents = () => {
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
+
               <div className="p-5">
                 <h3 className="font-serif text-lg font-semibold text-gray-900">
                   {event.title}

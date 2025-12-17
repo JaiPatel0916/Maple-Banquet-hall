@@ -6,7 +6,7 @@ export default function StageAreaSection() {
     <section className="bg-[#f6f2ee] py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-14 lg:grid-cols-2">
-          {/* Left Image */}
+         
           <div className="overflow-hidden rounded-2xl shadow-lg">
             <img
               src={stageImg}
@@ -15,7 +15,6 @@ export default function StageAreaSection() {
             />
           </div>
 
-          {/* Right Content */}
           <div>
             <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#d4a43c]">
               Stage Area

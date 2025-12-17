@@ -48,7 +48,9 @@ const FacilitiesSection = () => {
           </h2>
         </div>
 
+
       
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-[24px]">
           {facilities.map((item, i) => (
             <motion.div
@@ -58,17 +60,25 @@ const FacilitiesSection = () => {
               transition={{ duration: 0.4, delay: i * 0.06 }}
               viewport={{ once: true }}
               className="bg-white rounded-[16px] px-5 pt-7 pb-6 text-center shadow-[0_8px_24px_rgba(0,0,0,0.05)]"
-            >
+
          
+
+            
+
               <div className="mx-auto mb-4 flex h-[48px] w-[48px] items-center justify-center rounded-full bg-[#fbf3e3] text-[20px] text-[#d4a43c]">
                 {item.icon}
               </div>
+
+
 
               <h3 className="font-serif text-[14.5px] font-semibold text-[#1c1c1c]">
                 {item.title}
               </h3>
 
+
    
+
+
               <p className="mt-1.5 text-[12.5px] leading-[1.55] text-[#6b6b6b]">
                 {item.desc}
               </p>

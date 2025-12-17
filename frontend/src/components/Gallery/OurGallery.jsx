@@ -6,7 +6,6 @@ const GalleryHeader = () => {
     <section className="bg-[#f6f2ee] py-[80px]">
       <div className="mx-auto max-w-[1320px] px-6 text-center">
 
-     {/* Small Label */}
         <motion.p
           initial={{ opacity: 0, y: -6 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -16,7 +15,7 @@ const GalleryHeader = () => {
         >
           Our Gallery
         </motion.p>
- {/* Main Heading */}
+
         <motion.h2
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +29,6 @@ const GalleryHeader = () => {
           </span>
         </motion.h2>
 
-        {/* Description */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

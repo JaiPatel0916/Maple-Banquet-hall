@@ -1,5 +1,3 @@
-// FILE: src/components/Packages/PackagesAddOns.jsx
-
 const addOns = [
     {
         title: "Catering (per plate)",
@@ -30,7 +28,7 @@ const addOns = [
 const PackagesAddOns = () => {
     return (
         <section className="bg-[#f3ece5] py-24">
-            {/* Heading */}
+    
             <div className="text-center mb-16 px-4">
                 <p className="text-sm tracking-widest text-[#d29922] font-semibold mb-2">
                     ENHANCE YOUR EVENT
@@ -41,7 +39,7 @@ const PackagesAddOns = () => {
                 </h2>
             </div>
 
-            {/* Add-on Cards */}
+        
             <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
                 {addOns.map((item, index) => (
                     <div
