@@ -11,7 +11,7 @@ const ContactSection = () => {
     <section className="bg-[#FFFFFF] py-[80px]">
       <div className="mx-auto max-w-[1320px] px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
 
-        {/* FORM */}
+  
         <div className="bg-[#fffaf6] rounded-2xl p-6 md:p-10 shadow-sm">
           <h3 className="text-[22px] font-serif font-semibold mb-6">
             Send an Inquiry
@@ -19,7 +19,6 @@ const ContactSection = () => {
 
           <form className="space-y-4 text-[13px]">
 
-            {/* Name & Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="font-medium">Your Name *</label>
@@ -40,7 +39,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Phone & Date */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="font-medium">Phone Number *</label>
@@ -60,7 +58,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Event Type & Guests */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="font-medium">Event Type</label>
@@ -87,7 +84,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Message */}
             <div>
               <label className="font-medium">Additional Details</label>
               <textarea
@@ -97,7 +93,6 @@ const ContactSection = () => {
               />
             </div>
 
-            {/* Button */}
             <button
               type="submit"
               className="mt-4 w-full flex items-center justify-center gap-2 rounded-md bg-[#d4a43c] py-3 text-[13px] font-semibold text-black hover:bg-[#c3922e]"
@@ -108,8 +103,6 @@ const ContactSection = () => {
 
           </form>
         </div>
-
-        {/* CONTACT INFO */}
         <div>
           <h3 className="text-[22px] font-serif font-semibold mb-4">
             Get in Touch
@@ -121,7 +114,6 @@ const ContactSection = () => {
 
           <div className="space-y-4">
 
-            {/* Phone */}
             <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
                 <Phone size={18} className="text-[#d4a43c]" />
@@ -132,7 +124,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Email */}
             <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
                 <Mail size={18} className="text-[#d4a43c]" />
@@ -145,7 +136,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Address */}
             <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
                 <MapPin size={18} className="text-[#d4a43c]" />
@@ -158,7 +148,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Timings */}
+            
             <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
                 <Clock size={18} className="text-[#d4a43c]" />
