@@ -5,7 +5,6 @@ export default function Gallery() {
     return (
         <>
             <div >
-            
               <GalleryHeader/>
               <GalleryGrid/> 
             </div>
