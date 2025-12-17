@@ -59,10 +59,8 @@ const FacilitiesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[16px] px-5 pt-7 pb-6 text-center shadow-[0_8px_24px_rgba(0,0,0,0.05)]"
-
-         
-
+              className="bg-white rounded-[16px] px-5 pt-7 pb-6 text-center shadow-[0_8px_24px_rgba(0,0,0,0.05)]"     
+>
             
 
               <div className="mx-auto mb-4 flex h-[48px] w-[48px] items-center justify-center rounded-full bg-[#fbf3e3] text-[20px] text-[#d4a43c]">
