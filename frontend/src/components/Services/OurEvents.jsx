@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-// Import images from assets
 import weddingImg from "../../assets/images/wedding.jpeg";
 import engagementImg from "../../assets/images/engagement.jpg";
 import birthdayImg from "../../assets/images/birthday.jpg";
@@ -60,7 +58,6 @@ const OurEvents = () => {
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* Heading */}
         <div className="mb-14 text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#d4a43c]">
             Events We Host
@@ -70,7 +67,6 @@ const OurEvents = () => {
           </h2>
         </div>
 
-        {/* Events Grid */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {events.map((event, i) => (
             <motion.div
@@ -81,7 +77,7 @@ const OurEvents = () => {
               viewport={{ once: true }}
               className="group overflow-hidden rounded-xl bg-[#faf8f5] shadow-sm"
             >
-              {/* Image */}
+         
               <div className="h-44 overflow-hidden">
                 <img
                   src={event.image}
@@ -90,7 +86,6 @@ const OurEvents = () => {
                 />
               </div>
 
-              {/* Text */}
               <div className="p-5">
                 <h3 className="font-serif text-lg font-semibold text-gray-900">
                   {event.title}

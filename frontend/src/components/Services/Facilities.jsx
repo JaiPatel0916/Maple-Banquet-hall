@@ -39,7 +39,6 @@ const FacilitiesSection = () => {
     <section className="bg-[#f6f2ee] py-[80px]">
       <div className="mx-auto max-w-[1320px] px-6">
 
-        {/* Heading (reduced spacing) */}
         <div className="mb-[48px] text-center">
           <p className="text-[11px] uppercase tracking-[0.28em] font-semibold text-[#d4a43c]">
             Facilities
@@ -49,7 +48,6 @@ const FacilitiesSection = () => {
           </h2>
         </div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-[24px]">
           {facilities.map((item, i) => (
             <motion.div
@@ -60,17 +58,16 @@ const FacilitiesSection = () => {
               viewport={{ once: true }}
               className="bg-white rounded-[16px] px-5 pt-7 pb-6 text-center shadow-[0_8px_24px_rgba(0,0,0,0.05)]"
             >
-              {/* Icon */}
+            
               <div className="mx-auto mb-4 flex h-[48px] w-[48px] items-center justify-center rounded-full bg-[#fbf3e3] text-[20px] text-[#d4a43c]">
                 {item.icon}
               </div>
 
-              {/* Title */}
+           
               <h3 className="font-serif text-[14.5px] font-semibold text-[#1c1c1c]">
                 {item.title}
               </h3>
 
-              {/* Description */}
               <p className="mt-1.5 text-[12.5px] leading-[1.55] text-[#6b6b6b]">
                 {item.desc}
               </p>
