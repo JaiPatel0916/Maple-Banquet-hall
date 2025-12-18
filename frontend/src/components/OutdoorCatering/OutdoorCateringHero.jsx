@@ -11,7 +11,7 @@ const OutdoorCateringHero = () => {
                         Catering
                     </p>
 
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#3b1e1e] mb-6">
+                    <h2 className="text-4xl md:text-6xl font-bold text-[#3b1e1e] mb-6">
                         OutDoor{" "}
                         <span className="text-[#d29922] italic">
                             Catering

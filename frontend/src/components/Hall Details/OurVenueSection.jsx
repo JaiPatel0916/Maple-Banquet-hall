@@ -9,9 +9,11 @@ export default function OurVenueSection() {
           Our Venue
         </p>
 
-        <h1 className="text-4xl font-serif font-semibold text-gray-900 md:text-5xl">
+        <h1 className="text-4xl font-serif font-semibold text-gray-900 md:text-6xl">
           Banquet{" "}
-          <span className="italic text-[#d4a43c]">Hall Details</span>
+          <span className="italic font-serif text-[#d4a43c]">
+            Hall Details
+          </span>
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-base text-gray-600">

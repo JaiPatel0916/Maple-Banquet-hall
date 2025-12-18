@@ -7,7 +7,7 @@ const PackagesHero = () => {
                     PRICING
                 </p>
 
-                <h2 className="text-4xl md:text-5xl font-bold text-[#3b1e1e] mb-6">
+                <h2 className="text-4xl md:text-6xl font-bold text-[#3b1e1e] mb-6">
                     Our{" "}
                     <span className="text-[#d29922] italic">
                         Packages
