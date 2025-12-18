@@ -13,9 +13,9 @@ const AboutStory = () => {
                     ABOUT US
                 </p> 
 
-                <h2 className="text-4xl md:text-5xl font-bold text-black mb-3 leading-tight">
-                    Where Dreams Become <br />
-                    <span className="text-[#c79627] italic">Reality</span>
+                <h2 className="text-4xl md:text-6xl font-bold text-black mb-3 leading-tight">
+                    Where Dreams Become 
+                    <span className="text-[#c79627] italic"> Reality</span>
                 </h2>
 
                 <p className="text-gray-700 text-lg leading-relaxed">
