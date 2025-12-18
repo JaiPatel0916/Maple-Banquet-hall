@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import founder1 from "../../assets/images/founder.jpg";
-import founder2 from "../../assets/images/founder.jpg"; 
+import founder2 from "../../assets/images/founder.jpg";
 
 const FounderPreview = () => {
     return (
-        <section className="py-24 bg-[#FFFFFF]">
+        <section className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-6 text-center">
 
                 {/* Section Label */}
@@ -12,16 +12,16 @@ const FounderPreview = () => {
                     OUR FOUNDERS
                 </p>
 
-       
+                {/* Heading */}
                 <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-16">
                     The Visionaries Behind{" "}
                     <span className="text-[#D29922]">Maple Banquet</span>
                 </h2>
 
-           
-                <div className="grid gap-14 md:grid-cols-2 justify-center mb-16">
+                {/* Founders Grid */}
+                <div className="grid gap-16 md:grid-cols-2 justify-center">
 
-             
+                    {/* Founder 1 */}
                     <div className="flex flex-col items-center text-center">
                         <img
                             src={founder1}
@@ -33,17 +33,24 @@ const FounderPreview = () => {
                             Mr. Rajesh Sharma
                         </h3>
 
-                        <p className="text-[#D29922] mt-1 mb-3">
+                        {/* <p className="text-[#D29922] mt-1 mb-3">
                             Managing Director
-                        </p>
+                        </p> */}
 
-                        <p className="text-gray-600 text-sm max-w-sm">
+                        <p className="text-gray-600 text-sm max-w-sm mb-6">
                             15+ years of hospitality experience, driving Maple Banquet’s
                             vision of excellence.
                         </p>
+
+                        <Link
+                            to="/founder/1"
+                            className="inline-block bg-[#D29922] text-black px-6 py-3 rounded-lg font-medium hover:bg-[#b88619] transition"
+                        >
+                            Learn More
+                        </Link>
                     </div>
 
-                  
+                    {/* Founder 2 */}
                     <div className="flex flex-col items-center text-center">
                         <img
                             src={founder2}
@@ -55,25 +62,24 @@ const FounderPreview = () => {
                             Mr. Vikram Sharma
                         </h3>
 
-                        <p className="text-[#D29922] mt-1 mb-3">
+                        {/* <p className="text-[#D29922] mt-1 mb-3">
                             Director of Operations
+                        </p> */}
+
+                        <p className="text-gray-600 text-sm max-w-sm mb-6">
+                            Ensuring flawless execution and extraordinary guest
+                            experiences at every event.
                         </p>
 
-                        <p className="text-gray-600 text-sm max-w-sm">
-                            Ensuring flawless execution and extraordinary guest experiences
-                            at every event.
-                        </p>
+                        <Link
+                            to="/founder/2"
+                            className="inline-block bg-[#D29922] text-black px-6 py-3 rounded-lg font-medium hover:bg-[#b88619] transition"
+                        >
+                            Learn More
+                        </Link>
                     </div>
+
                 </div>
-
-               
-                <Link
-                    to="/founder"
-                    className="inline-block bg-[#D29922] text-black px-8 py-3 rounded-lg font-medium hover:bg-[#b88619] transition"
-                >
-                    Learn More About Our Founders
-                </Link>
-
             </div>
         </section>
     );
