@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FiMenu, FiX, FiPhone } from "react-icons/fi";
-
-const NAV_HEIGHT = 72;
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -25,6 +23,7 @@ const Navbar = () => {
         setOpen(false);
       }
     };
+
     if (open) document.addEventListener("mousedown", handleOutsideClick);
     return () =>
       document.removeEventListener("mousedown", handleOutsideClick);
@@ -32,37 +31,51 @@ const Navbar = () => {
 
   return (
     <>
-    
+      {/* NAVBAR */}
       <nav className="fixed top-0 left-0 w-full h-[72px] bg-[#F7F2EE] z-[10000] shadow-md">
         <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
 
+          {/* LOGO */}
           <h1 className="text-xl md:text-2xl font-bold text-[#7A1F1F]">
             Maple Banquet
           </h1>
 
-    
+          {/* DESKTOP MENU */}
           <div className="hidden lg:flex items-center gap-8">
             {menuItems.map((item) => (
-              <Link
+              <NavLink
                 key={item.title}
                 to={item.link}
-                className="text-gray-800 hover:text-[#BE8C1A] relative group"
+                className={({ isActive }) =>
+                  `relative group transition ${
+                    isActive
+                      ? "text-[#BE8C1A] font-semibold"
+                      : "text-gray-800 hover:text-[#BE8C1A]"
+                  }`
+                }
               >
                 {item.title}
-                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#BE8C1A] transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-[#BE8C1A] transition-all duration-300 ${
+                    location.pathname === item.link
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
+                  }`}
+                />
+              </NavLink>
             ))}
 
             <div className="flex items-center gap-3">
               <span className="flex items-center gap-1 text-gray-700">
                 <FiPhone /> 9579187450
               </span>
-              <button className="bg-[#D29922] px-4 py-2 rounded-lg font-medium">
+              <button className="bg-[#D29922] px-4 py-2 rounded-lg font-medium hover:bg-[#b88619]">
                 Book Now
               </button>
             </div>
           </div>
 
+          {/* MOBILE MENU BUTTON */}
           <button
             className="lg:hidden text-3xl"
             onClick={() => setOpen(!open)}
@@ -72,6 +85,7 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* MOBILE DROPDOWN */}
       {open && (
         <div
           ref={menuRef}
@@ -79,22 +93,30 @@ const Navbar = () => {
         >
           <div className="flex flex-col px-6 py-4 space-y-4">
             {menuItems.map((item) => (
-              <Link
+              <NavLink
                 key={item.title}
                 to={item.link}
                 onClick={() => setOpen(false)}
-                className="text-lg border-b pb-2"
+                className={({ isActive }) =>
+                  `text-lg border-b pb-2 transition ${
+                    isActive
+                      ? "text-[#BE8C1A] font-semibold"
+                      : "text-gray-800"
+                  }`
+                }
               >
                 {item.title}
-              </Link>
+              </NavLink>
             ))}
 
-            <div className="flex items-center gap-2 pt-2">
+            <div className="flex items-center gap-2 pt-2 text-gray-700">
               <FiPhone /> 9579187450
             </div>
           </div>
         </div>
       )}
+
+      {/* NAVBAR SPACER */}
       <div className="h-[72px]" />
     </>
   );
