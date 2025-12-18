@@ -1,5 +1,5 @@
 import React from "react";
-import stageImg from "../../assets/images/hall-1.jpg";
+import stageImg from "../../assets/images/hall1.jpg";
 
 export default function StageAreaSection() {
   return (
