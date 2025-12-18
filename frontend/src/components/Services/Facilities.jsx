@@ -66,7 +66,7 @@ const FacilitiesSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-[24px]">
 
-        {/* Cards (3 + 3 layout) */}
+      
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[28px]">
 
           {facilities.map((item, i) => {
@@ -105,7 +105,7 @@ const FacilitiesSection = () => {
             );
           })}
         </div>
-
+</div>
       </div>
     </section>
   );
