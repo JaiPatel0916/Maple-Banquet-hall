@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { FiMenu, FiX, FiPhone } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -69,9 +70,13 @@ const Navbar = () => {
               <span className="flex items-center gap-1 text-gray-700">
                 <FiPhone /> 9579187450
               </span>
-              <button className="bg-[#D29922] px-4 py-2 rounded-lg font-medium hover:bg-[#b88619]">
+
+              <Link
+                to="/contact"
+                className="bg-[#D29922] px-4 py-2 rounded-lg font-medium hover:bg-[#b88619] inline-block"
+              >
                 Book Now
-              </button>
+              </Link>
             </div>
           </div>
 

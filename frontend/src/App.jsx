@@ -9,7 +9,7 @@ import OutdoorCatering from "./pages/OutdoorCatering";
 import Packages from "./pages/Packages";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
-import Founder from "./pages/Founder";
+import Founder from "./pages/FounderDetails";
 import ScrollToTop from "./components/ScrollToTop";
 
 
@@ -33,7 +33,8 @@ function App() {
         <Route path="/Gallery" element={< Gallery />} />
         <Route path="/outdoor-catering" element={<OutdoorCatering />} />
         <Route path="/contact" element={< Contact />} />
-        <Route path="/founder" element={<Founder />} />
+        <Route path="/founder/:id" element={<Founder />} />
+
       </Routes>
       {!shouldHideFooter && <Footer />}
     </>
