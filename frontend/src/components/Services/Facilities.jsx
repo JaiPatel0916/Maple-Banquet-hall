@@ -46,7 +46,7 @@ const facilities = [
 const FacilitiesSection = () => {
   return (
     <section className="bg-[#f6f2ee] py-[80px]">
-      <div className="mx-auto max-w-[1320px] px-6">
+      <div className="mx-auto max-w-[1200px] px-6">
 
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -63,7 +63,12 @@ const FacilitiesSection = () => {
           </h2>
         </motion.div>
 
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-[24px]">
+
+        {/* Cards (3 + 3 layout) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[28px]">
+
           {facilities.map((item, i) => {
             const Icon = item.icon;
 
@@ -79,7 +84,7 @@ const FacilitiesSection = () => {
                   y: -8,
                   boxShadow: "0 20px 40px rgba(212,164,60,0.18)",
                 }}
-                className="bg-white rounded-[16px] px-5 pt-7 pb-6 text-center transition"
+                className="bg-white rounded-[16px] px-6 pt-8 pb-7 text-center transition"
               >
              
                 <motion.div
