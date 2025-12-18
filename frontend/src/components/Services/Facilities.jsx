@@ -59,7 +59,7 @@ const FacilitiesSection = () => {
             );
           })}
         </div>
-
+</div>
       </div>
     </section>
   );

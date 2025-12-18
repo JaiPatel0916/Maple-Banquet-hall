@@ -21,9 +21,13 @@ const Footer = () => {
                 <p className="max-w-2xl mx-auto mb-6">
                     Let us help you create an unforgettable experience.
                 </p>
-                <button className="bg-[#D29922] hover:bg-[#b88619] px-6 py-3 rounded-lg font-semibold shadow">
-                    Get in Touch
-                </button>
+                <Link
+                         to="/contact"
+                         className="inline-block rounded-md bg-[#d4a43c] px-6 py-3 font-semibold text-black transition hover:bg-[#c29635] xs-full text-center"
+                       >
+                       Get In Touch 
+                       </Link>
+             
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 items-start">
