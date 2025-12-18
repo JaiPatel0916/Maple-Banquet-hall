@@ -40,13 +40,13 @@ const FounderProfile = ({ founderId }) => {
                         alt={founder.name}
                         className="rounded-2xl shadow-xl"
                     />
-                    <div className="absolute -bottom-6 -right-6 bg-[#D29922] text-black px-6 py-4 rounded-xl shadow-lg">
+                    <div className="absolute bottom-6 -right-6 bg-[#D29922] text-black px-2 py-2 rounded-xl shadow-lg">
                         <p className="text-2xl font-bold">15+</p>
                         <p className="text-sm">Years of Excellence</p>
                     </div>
                 </div>
 
-                {/* Content */}
+         
                 <div>
                     <p className="text-sm tracking-widest text-[#D29922] mb-2">
                         MEET OUR FOUNDER
