@@ -48,16 +48,40 @@ const Footer = () => {
                     </p>
 
                     <div className="flex gap-4 mt-4">
-                        <a href="#" className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition">
-                            <FaFacebookF size={18} />
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                            className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
+                   transition-all duration-300 ease-out
+                   hover:bg-[#D29922] hover:text-black
+                   hover:-translate-y-1 hover:scale-110"
+                        >
+                            <FaFacebookF size={16} />
                         </a>
-                        <a href="#" className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition">
-                            <FaInstagram size={18} />
+
+                        <a
+                            href="https://www.instagram.com/maple.banquet?igsh=bGV5NzR6bGc4eWV5"
+                            aria-label="Instagram"
+                            className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
+                   transition-all duration-300 ease-out
+                   hover:bg-[#D29922] hover:text-black
+                   hover:-translate-y-1 hover:scale-110"
+                        >
+                            <FaInstagram size={16} />
                         </a>
-                        <a href="#" className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition">
-                            <FaYoutube size={18} />
+
+                        <a
+                            href="#"
+                            aria-label="YouTube"
+                            className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
+                   transition-all duration-300 ease-out
+                   hover:bg-[#D29922] hover:text-black
+                   hover:-translate-y-1 hover:scale-110"
+                        >
+                            <FaYoutube size={16} />
                         </a>
                     </div>
+
                 </div>
 
 
@@ -79,11 +103,11 @@ const Footer = () => {
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Our Services</h3>
                     <ul className="space-y-2">
-                        <li>Kitty Parties</li>
+                        <li>Corporate Events</li>
                         <li>Engagement Ceremonies</li>
                         <li>Baby Shower</li>
                         <li>Birthday Parties</li>
-                        <li>Corporate Events</li>
+                        <li>Kitty Parties</li>
                         <li>Family Reunions</li>
                         <li>Wedding Celebrations</li>
                     </ul>
