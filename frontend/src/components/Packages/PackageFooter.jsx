@@ -49,7 +49,7 @@ const Footer = () => {
 
                     <div className="flex gap-4 mt-4">
                         <a
-                            href="#"
+                            href="https://www.facebook.com/share/r/17nTKeUDpv/?mibextid=wwXIfr"
                             aria-label="Facebook"
                             className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
                    transition-all duration-300 ease-out
