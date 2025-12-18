@@ -31,7 +31,7 @@ const FacilitiesSection = () => {
             Facilities
           </p>
           <h2 className="mt-3 text-[40px] md:text-[48px] font-serif font-semibold text-[#1c1c1c]">
-            Everything You Need
+            Everything you Need
           </h2>
         </div>
 
@@ -59,7 +59,7 @@ const FacilitiesSection = () => {
             );
           })}
         </div>
-</div>
+
       </div>
     </section>
   );
