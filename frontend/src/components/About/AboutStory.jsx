@@ -5,7 +5,7 @@ import AboutImage from "../../assets/images/hall.jpg";
 
 const AboutStory = () => {
     return (
-        <section className="bg-[#FFFFFF] pt-24 pb-20">
+        <section className="bg-[#f6f2ee] pt-24 pb-20">
 
             
             <div className="text-center max-w-3xl mx-auto px-4">
