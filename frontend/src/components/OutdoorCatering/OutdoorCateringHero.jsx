@@ -2,7 +2,7 @@ const OutdoorCateringHero = () => {
     return (
         <section className="relative h-[50vh]  min-h-[360px] w-full overflow-hidden">
 
-            <div className="absolute inset-0 bg-[#FFFFF] " />
+            <div className="absolute inset-0 bg-[#f3ece5] " />
 
             {/* Content */}
             <div className="relative z-10 flex h-full items-center justify-center px-4 text-center">

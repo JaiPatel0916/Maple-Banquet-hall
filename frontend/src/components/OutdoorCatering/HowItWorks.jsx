@@ -38,7 +38,7 @@ const itemVariants = {
 
 const HowItWorks = () => {
     return (
-        <section className="bg-[#f6f2ee] py-24">
+        <section className="bg-[#FFFFF] py-24">
             <div className="mx-auto max-w-6xl px-6">
 
           
