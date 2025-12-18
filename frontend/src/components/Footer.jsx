@@ -6,86 +6,114 @@ import {
 } from "react-icons/fi";
 
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
-import Logo from "../assets/images/maple-logo.png";
 import { Link } from "react-router-dom";
-
+import Logo from "../assets/images/maple-logo.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#f6f2ee]  text-black pt-20 pb-8 px-6 md:px-12 lg:px-20">
+        <footer className="bg-[#f6f2ee] text-black pt-20 pb-8 px-6 md:px-12 lg:px-20">
 
+            {/* CTA */}
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                     Ready to Plan Your Event?
                 </h2>
-                <p className="max-w-2xl mx-auto text-black-200 mb-6">
-                    Let us help you create an unforgettable experience. Contact us today to discuss your requirements.
+                <p className="max-w-2xl mx-auto mb-6">
+                    Let us help you create an unforgettable experience.
                 </p>
-                <button className="bg-[#D29922] hover:bg-[#b88619] text-black font-semibold px-6 py-3 rounded-lg shadow">
+                <button className="bg-[#D29922] hover:bg-[#b88619] px-6 py-3 rounded-lg font-semibold shadow">
                     Get in Touch
                 </button>
             </div>
 
+            {/* Footer Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 items-start">
 
+                {/* Logo + Description */}
+                <div className="flex flex-col items-start">
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-black-200">
-                <div>
-                    <div className="flex items-center gap-3 mb-4">
+                    {/* LOGO FIX */}
+                    <div className="w-72 h-[90px] overflow-hidden mb-3">
                         <img
                             src={Logo}
                             alt="Maple Banquet Logo"
-                            className="w-[660px] h-[160px] object-contain"
+                            className="w-full h-full object-contain object-top"
                         />
-                        {/* <div>
-                            <h3 className="text-xl font-bold text-white">Maple Banquet</h3>
-                            <p className="text-sm text-gray-300">A unit of Chefin Hospitalities</p>
-                        </div> */}
                     </div>
 
-                    <p className="text-black-300 leading-relaxed mb-4">
-                        Creating unforgettable moments in our elegant venue. Your perfect celebration starts here with our exceptional service and stunning ambiance.
+                    <p className="leading-relaxed mb-4">
+                        Creating unforgettable moments in our elegant venue.
+                        Your perfect celebration starts here with our exceptional
+                        service and stunning ambiance.
                     </p>
 
                     <div className="flex gap-4 mt-4">
-                        <a href="#" className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition">
-                            <FaFacebookF size={18} />
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                            className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
+                   transition-all duration-300 ease-out
+                   hover:bg-[#D29922] hover:text-black
+                   hover:-translate-y-1 hover:scale-110"
+                        >
+                            <FaFacebookF size={16} />
                         </a>
-                        <a href="#" className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition">
-                            <FaInstagram size={18} />
+
+                        <a
+                            href="https://www.instagram.com/maple.banquet?igsh=bGV5NzR6bGc4eWV5"
+                            aria-label="Instagram"
+                            className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
+                   transition-all duration-300 ease-out
+                   hover:bg-[#D29922] hover:text-black
+                   hover:-translate-y-1 hover:scale-110"
+                        >
+                            <FaInstagram size={16} />
                         </a>
-                        <a href="#" className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition">
-                            <FaYoutube size={18} />
+
+                        <a
+                            href="#"
+                            aria-label="YouTube"
+                            className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
+                   transition-all duration-300 ease-out
+                   hover:bg-[#D29922] hover:text-black
+                   hover:-translate-y-1 hover:scale-110"
+                        >
+                            <FaYoutube size={16} />
                         </a>
                     </div>
+
                 </div>
 
+                {/* Quick Links */}
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Quick Links</h3>
                     <ul className="space-y-2">
-                        <li><Link to="/" className="hover:text-[#D29922]">Home</Link></li>
-                        <li><Link to="/about" className="hover:text-[#D29922]">About Us</Link></li>
-                        <li><Link to="/hall" className="hover:text-[#D29922]">Hall Details</Link></li>
-                        <li><Link to="/services" className="hover:text-[#D29922]">Services</Link></li>
-                        <li><Link to="/gallery" className="hover:text-[#D29922]">Gallery</Link></li>
-                        <li><Link to="/outdoor-catering" className="hover:text-[#D29922]">Outdoor Catering</Link></li>
-                        <li><Link to="/packages" className="hover:text-[#D29922]">Packages</Link></li>
-                        <li><Link to="/contact" className="hover:text-[#D29922]">Contact</Link></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About Us</Link></li>
+                        <li><Link to="/hall">Hall Details</Link></li>
+                        <li><Link to="/services">Services</Link></li>
+                        <li><Link to="/gallery">Gallery</Link></li>
+                        <li><Link to="/outdoor-catering">Outdoor Catering</Link></li>
+                        <li><Link to="/packages">Packages</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>
 
+                {/* Services */}
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Our Services</h3>
                     <ul className="space-y-2">
-                        <li>Kitty Parties</li>
+                        <li>Corporate Events</li>
                         <li>Engagement Ceremonies</li>
                         <li>Baby Shower</li>
                         <li>Birthday Parties</li>
-                        <li>Corporate Events</li>
+                        <li>Kitty Parties</li>
                         <li>Family Reunions</li>
                         <li>Wedding Celebrations</li>
                     </ul>
                 </div>
 
+                {/* Contact */}
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Contact Us</h3>
 
@@ -111,14 +139,15 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="border-t border-gray-600 mt-14 pt-4 flex flex-col md:flex-row justify-between text-black-300 text-sm">
+            {/* Bottom Bar */}
+            <div className="border-t border-gray-600 mt-14 pt-4 flex flex-col md:flex-row justify-between text-sm">
                 <p>© 2025 Maple Banquet. All rights reserved.</p>
-
                 <div className="flex gap-6 mt-3 md:mt-0">
-                    <a href="#" className="hover:text-[#D29922] text-black">Privacy Policy</a>
-                    <a href="#" className="hover:text-[#D29922] text-black">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
                 </div>
             </div>
+
         </footer>
     );
 };

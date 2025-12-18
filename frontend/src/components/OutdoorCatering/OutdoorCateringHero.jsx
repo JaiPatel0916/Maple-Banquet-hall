@@ -7,6 +7,9 @@ const OutdoorCateringHero = () => {
             {/* Content */}
             <div className="relative z-10 flex h-full items-center justify-center px-4 text-center">
                 <div className="max-w-3xl">
+                    <p className="text-sm tracking-widest text-[#d29922] font-semibold mb-3">
+                        Catering
+                    </p>
 
                     <h2 className="text-4xl md:text-5xl font-bold text-[#3b1e1e] mb-6">
                         OutDoor{" "}

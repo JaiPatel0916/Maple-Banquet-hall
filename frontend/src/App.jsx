@@ -10,6 +10,8 @@ import Packages from "./pages/Packages";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Founder from "./pages/Founder";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 
 
@@ -20,7 +22,8 @@ function App() {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
