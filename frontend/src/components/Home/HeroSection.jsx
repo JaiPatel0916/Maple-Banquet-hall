@@ -1,5 +1,6 @@
 import React from "react";
 import heroImage from "../../assets/images/hero-banquet.jpg";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -23,19 +24,22 @@ export default function HeroSection() {
           weddings, celebrations, and corporate events with exceptional service.
         </p>
 
-
-    
-
         <div className="mt-8 flex gap-4 xs-center">
-          <button className="rounded-md bg-[#d4a43c] px-6 py-3 font-semibold text-black transition hover:bg-[#c29635] xs-full">
+          <Link
+            to="/contact"
+            className="inline-block rounded-md bg-[#d4a43c] px-6 py-3 font-semibold text-black transition hover:bg-[#c29635] xs-full text-center"
+          >
             Book Your Event
-          </button>
+          </Link>
 
-          <button className="rounded-md border-2 border-[#d4a43c] px-6 py-3 font-semibold text-[#d4a43c] transition hover:bg-[#d4a43c] hover:text-black xs-full">
+          <Link
+            to="/hall"
+            className="inline-block rounded-md border-2 border-[#d4a43c] px-6 py-3 font-semibold text-[#d4a43c] transition hover:bg-[#d4a43c] hover:text-black xs-full text-center"
+          >
             Explore Venue
-          </button>
-        </div>
+          </Link>
 
+        </div>
 
         <div className="mt-14 grid grid-cols-1 gap-8 text-[#d4a43c] sm:grid-cols-3">
           <div>
