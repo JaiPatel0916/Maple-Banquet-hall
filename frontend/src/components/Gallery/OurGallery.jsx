@@ -21,8 +21,8 @@ const GalleryHeader = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
           viewport={{ once: true }}
-          className="mt-3 text-[40px] md:text-[48px] font-serif font-semibold text-[#1c1c1c]"
-        >
+          className="text-4xl md:text-6xl font-bold text-black mb-3 leading-tight"
+          >
           Visual{" "}
           <span className="italic font-serif text-[#d4a43c]">
             Journey
