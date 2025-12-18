@@ -78,11 +78,11 @@ const Footer = () => {
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Our Services</h3>
                     <ul className="space-y-2">
-                        <li>Kitty Parties</li>
+                        <li>Corporate Events</li>
                         <li>Engagement Ceremonies</li>
                         <li>Baby Shower</li>
                         <li>Birthday Parties</li>
-                        <li>Corporate Events</li>
+                        <li>Kitty Parties</li>
                         <li>Family Reunions</li>
                         <li>Wedding Celebrations</li>
                     </ul>
