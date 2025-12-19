@@ -7,14 +7,14 @@ const AboutStory = () => {
     return (
         <section className="bg-[#f6f2ee] pt-24 pb-20">
 
-            
+
             <div className="text-center max-w-3xl mx-auto px-4">
                 <p className="text-sm tracking-widest text-[#b28a3b] font-semibold mb-2">
                     ABOUT US
-                </p> 
+                </p>
 
                 <h2 className="text-4xl md:text-6xl font-bold text-black mb-3 leading-tight">
-                    Where Dreams Become 
+                    Where Dreams Become
                     <span className="text-[#c79627] italic"> Reality</span>
                 </h2>
 
@@ -24,16 +24,18 @@ const AboutStory = () => {
                 </p>
             </div>
 
-         
-            <div className="max-w-7xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-4 md:px-8">
 
-               
-                <div className="relative">
+            <div className="max-w-7xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch px-4 md:px-8">
+
+
+
+                <div className="relative h-full">
                     <img
                         src={AboutImage}
                         alt="Banquet Hall"
-                        className="rounded-2xl shadow-lg w-full h-auto object-cover"
+                        className="rounded-2xl shadow-lg w-full h-full object-cover"
                     />
+
 
 
                     <div className="absolute -bottom-6 left-6 bg-[#d29922] shadow-lg rounded-lg px-6 py-4">
@@ -42,7 +44,7 @@ const AboutStory = () => {
                     </div>
                 </div>
 
-                
+
                 <div>
                     <p className="text-sm tracking-widest text-[#b28a3b] font-semibold mb-2">
                         OUR STORY
