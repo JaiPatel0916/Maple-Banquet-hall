@@ -1,6 +1,6 @@
 import PackagesHero from "../components/Packages/PackagesHero";
 import PackagesCards from "../components/Packages/PackagesCards";
-import PackagesAddOns from "../components/Packages/PackagesAddOns";
+// import PackagesAddOns from "../components/Packages/PackagesAddOns";
 import PackagesCTA from "../components/Packages/PackagesCTA";
 import PackageFooter from "../components/Packages/PackageFooter";
 
@@ -9,7 +9,7 @@ const Packages = () => {
         <div >
             <PackagesHero />
             <PackagesCards />
-            <PackagesAddOns />
+            {/* <PackagesAddOns /> */}
             <PackagesCTA />
             <PackageFooter/>
            

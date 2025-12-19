@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FiMenu, FiX, FiPhone } from "react-icons/fi";
-import { Link } from "react-router-dom";
 import Logo from "../assets/images/maple-logo.png";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
@@ -15,7 +15,6 @@ const Navbar = () => {
     { title: "Gallery", link: "/gallery" },
     { title: "Packages", link: "/packages" },
     { title: "Outdoor Catering", link: "/outdoor-catering" },
-    { title: "Contact", link: "/contact" },
   ];
 
   useEffect(() => {
@@ -32,93 +31,84 @@ const Navbar = () => {
 
   return (
     <>
-     
-      <nav className="fixed top-0 left-0 w-full h-[72px] bg-[#F7F2EE] z-[10000] shadow-md">
-        <div className="max-w-8xl mx-auto px-4 h-full flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            {/* Logo – bigger on mobile */}
-            <div className="w-30 h-12 sm:w-14 sm:h-20 md:w-48 md:h-24 md:left-10 relative">
-              <img
-                src={Logo}
-                alt="Maple Banquet Logo"
-                className="w-full h-full object-contain"
-              />
-            </div>
-
-            {/* Text – only on large screens */}
-            {/* <span className="hidden lg:block text-xl md:text-2xl font-bold text-[#7A1F1F]">
-              Maple Banquet
-            </span> */}
+      <nav className="fixed top-0 left-0 w-full h-[64px] sm:h-[72px] bg-[#F7F2EE] z-[10000] shadow-md">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 h-full flex items-center justify-between">
+          <Link to="/" className="flex items-center shrink-0">
+            <img
+              src={Logo}
+              alt="Maple Banquet Logo"
+              className="
+                h-9 w-auto     
+                sm:h-11
+                md:h-14
+                object-contain
+              "
+            />
           </Link>
-
-
-         
           <div className="hidden lg:flex items-center gap-8">
             {menuItems.map((item) => (
               <NavLink
                 key={item.title}
                 to={item.link}
                 className={({ isActive }) =>
-                  `relative group transition ${
-                    isActive
-                      ? "text-[#BE8C1A] font-semibold"
-                      : "text-gray-800 hover:text-[#BE8C1A]"
+                  `relative transition ${isActive
+                    ? "text-[#BE8C1A] font-semibold"
+                    : "text-gray-800 hover:text-[#BE8C1A]"
                   }`
                 }
               >
                 {item.title}
-                <span
-                  className={`absolute left-0 -bottom-1 h-[2px] bg-[#BE8C1A] transition-all duration-300 ${
-                    location.pathname === item.link
-                      ? "w-full"
-                      : "w-0 group-hover:w-full"
-                  }`}
-                />
               </NavLink>
             ))}
-
-            <div className="flex items-center gap-3">
-              <span className="flex items-center gap-1 text-gray-700">
-                <FiPhone /> 9579187450
-              </span>
-
-              <Link
-                to="/contact"
-                className="bg-[#D29922] px-4 py-2 rounded-lg font-medium hover:bg-[#b88619] inline-block"
-              >
-                Book Now
-              </Link>
-            </div>
           </div>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <a
+              href="tel:+919579187450"
+              className="hidden lg:flex items-center gap-1 text-gray-700 hover:text-[#BE8C1A]"
+            >
+              <FiPhone />
+              9579187450
+            </a>
 
-          <button
-            className="lg:hidden text-3xl"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <FiX /> : <FiMenu />}
-          </button>
+            <Link
+              to="/contact"
+              className="
+                bg-[#D29922]
+                px-3 py-1.5 text-sm      
+                sm:px-4 sm:py-2 sm:text-base
+                rounded-md
+                font-medium
+                hover:bg-[#b88619]
+                transition
+                whitespace-nowrap
+              "
+            >
+              Book Now
+            </Link>
+
+  
+            <button
+              className="lg:hidden text-2xl sm:text-3xl ml-1"
+              onClick={() => setOpen(!open)}
+            >
+              {open ? <FiX /> : <FiMenu />}
+            </button>
+          </div>
         </div>
       </nav>
 
-  
       {open && (
         <div
           ref={menuRef}
-          className="fixed top-[72px] left-0 w-full bg-[#F7F2EE] z-[9999] shadow-md lg:hidden"
+          className="fixed top-[64px] sm:top-[72px] left-0 w-full bg-[#F7F2EE] z-[9999] shadow-md lg:hidden"
         >
-          <div className="flex flex-col px-6 py-4 space-y-4">
+          <div className="flex flex-col px-5 py-4 space-y-4">
             {menuItems.map((item) => (
               <NavLink
                 key={item.title}
                 to={item.link}
                 onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  `text-lg border-b pb-2 transition ${
-                    isActive
-                      ? "text-[#BE8C1A] font-semibold"
-                      : "text-gray-800"
-                  }`
-                }
+                className="text-base border-b pb-2"
               >
                 {item.title}
               </NavLink>
@@ -126,18 +116,16 @@ const Navbar = () => {
 
             <a
               href="tel:+919579187450"
-              className="flex items-center gap-2 pt-2 text-gray-700 hover:text-[#D29922]"
+              className="flex items-center gap-2 pt-2 text-gray-700"
             >
               <FiPhone />
-              <span>9579187450</span>
+              9579187450
             </a>
-
           </div>
         </div>
       )}
 
-     
-      <div className="h-[72px]" />
+      <div className="h-[64px] sm:h-[72px]" />
     </>
   );
 };
