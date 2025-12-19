@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import imgMain from "../../assets/images/hero-banquet.jpg";
 import imgTop1 from "../../assets/images/hall1.jpg";
@@ -16,7 +17,6 @@ export default function GallerySection() {
     <section className="bg-[#f6f2ee] py-8">
       <div className="mx-auto max-w-5xl 2xl:max-w-6xl px-4">
 
-        {/* Heading */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -36,10 +36,10 @@ export default function GallerySection() {
           </p>
         </motion.div>
 
-        {/* Gallery Grid */}
+      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
 
-          {/* Image 1 */}
+         
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -61,7 +61,6 @@ export default function GallerySection() {
 
           </motion.div>
 
-          {/* Image 2 */}
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -83,7 +82,6 @@ export default function GallerySection() {
             />
           </motion.div>
 
-          {/* Image 3 */}
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -105,7 +103,6 @@ export default function GallerySection() {
             />
           </motion.div>
 
-          {/* Image 4 */}
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -129,7 +126,6 @@ export default function GallerySection() {
 
         </div>
 
-        {/* Button */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -138,9 +134,11 @@ export default function GallerySection() {
           transition={{ duration: 0.6 }}
           className="mt-5 text-center"
         >
+          <Link to="/gallery">
           <button className="rounded-md bg-[#d4a43c] px-5 py-2 text-[12px] font-semibold text-black transition hover:bg-[#c29635]">
             View Gallery
-          </button>
+            </button>
+            </Link>
         </motion.div>
 
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import weddingImg from "../../assets/images/wedding.jpeg";
 import birthdayImg from "../../assets/images/birthday.jpg";
 import corporateImg from "../../assets/images/corporate.jpg";
@@ -7,17 +8,17 @@ const services = [
   {
     title: "Wedding Celebrations",
     image: weddingImg,
-    link: "#",
+    link: "/services",
   },
   {
     title: "Birthday Parties",
     image: birthdayImg,
-    link: "#",
+    link: "/services",
   },
   {
     title: "Corporate Events",
     image: corporateImg,
-    link: "#",
+    link: "/services",
   },
 ];
 
@@ -36,9 +37,11 @@ export default function ServicesSection() {
             </h2>
           </div>
 
-          <button className="flex items-center gap-2 rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-800 transition hover:bg-gray-100">
-            View All Services →
-          </button>
+          <Link to="/services">
+            <button className="flex items-center gap-2 rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-800 transition hover:bg-[#d4a43c]">
+              View All Services →
+            </button>
+          </Link>
         </div>
 
      
@@ -47,7 +50,7 @@ export default function ServicesSection() {
             <div
               key={index}
               className="group relative h-[420px] overflow-hidden rounded-2xl"
-            >
+            > 
               
               <img
                 src={service.image}
