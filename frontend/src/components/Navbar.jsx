@@ -113,9 +113,14 @@ const Navbar = () => {
               </NavLink>
             ))}
 
-            <div className="flex items-center gap-2 pt-2 text-gray-700">
-              <FiPhone /> 9579187450
-            </div>
+            <a
+              href="tel:+919579187450"
+              className="flex items-center gap-2 pt-2 text-gray-700 hover:text-[#D29922]"
+            >
+              <FiPhone />
+              <span>9579187450</span>
+            </a>
+
           </div>
         </div>
       )}
