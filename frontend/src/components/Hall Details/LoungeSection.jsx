@@ -1,5 +1,5 @@
 import React from "react";
-import loungeImg from "../../assets/images/hall-2.jpg";
+import loungeImg from "../../assets/images/hall.jpg";
 
 export default function LoungeSection() {
   return (

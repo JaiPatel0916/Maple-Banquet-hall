@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import imgMain from "../../assets/images/hero-banquet.jpg";
-import imgTop1 from "../../assets/images/hall-1.jpg";
-import imgTop2 from "../../assets/images/hall-2.jpg";
+import imgTop1 from "../../assets/images/hall1.jpg";
+import imgTop2 from "../../assets/images/hall3.jpg";
 import imgBottom from "../../assets/images/catering.jpg";
 
 const fadeUp = {

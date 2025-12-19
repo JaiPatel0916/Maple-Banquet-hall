@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 
 import hall from "../../assets/images/hall.jpg";
-import hall1 from "../../assets/images/hall-1.jpg";
-import hall2 from "../../assets/images/hall-2.jpg";
+import hall1 from "../../assets/images/hall1.jpg";
+//import hall2 from "../../assets/images/hall1.jpg";
 import wedding from "../../assets/images/wedding.jpeg";
 import birthday from "../../assets/images/birthday.jpg";
 import catering from "../../assets/images/catering.jpg";
@@ -13,6 +13,7 @@ import hall3 from "../../assets/images/hall3.jpg";
 import birthday2 from "../../assets/images/birthday2.jpg";
 import catering2 from "../../assets/images/catering2.jpg";
 import wedding2 from "../../assets/images/wedding2.jpg"
+
 
 const galleryItems = [
   { img: hall, category: "hall" },
@@ -25,10 +26,10 @@ const galleryItems = [
   { img: engagement, category: "Events" },
   { img: family, category: "Venue" },
 
-  { img: hall2, category: "Venue" },
+  { img: hall1, category: "Venue" },
   { img: catering, category: "Catering" },
   { img: birthday2, category: "Events" },
-  { img: wedding2, category: "Weddings" },
+  { img: wedding2, category: "Weddings"},
 ];
 
 const filters = ["All", "Venue", "Weddings", "Events", "Catering"];
