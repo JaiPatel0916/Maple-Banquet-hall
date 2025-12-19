@@ -67,12 +67,12 @@ export default function ServicesSection() {
                   {service.title}
                 </h3>
 
-                <a
-                  href={service.link}
-                  className="mt-2 inline-flex items-center gap-2 text-sm text-[#d4a43c]"
+                <Link
+                  to="/services"
+                  className="mt-2 inline-flex items-center gap-2 text-sm text-[#d4a43c] hover:underline"
                 >
                   Learn More →
-                </a>
+                </Link>
               </div>
             </div>
           ))}
