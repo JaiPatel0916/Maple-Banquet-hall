@@ -11,7 +11,7 @@ export default function HeroSection() {
     >
       <div className="absolute inset-0 bg-black/50 z-0" />
 
-      <div className="relative z-10 flex min-h-[calc(100vh-72px)] flex-col items-center justify-center px-6 pt-16 md:pt-0 text-center text-white">
+      <div className="relative z-10 flex min-h-[calc(115vh-72px)] flex-col items-center justify-center px-6 pt-16 md:pt-0 text-center text-white">
 
         <h1 className="text-4xl font-light md:text-6xl">
           Create{" "}
@@ -43,7 +43,7 @@ export default function HeroSection() {
           </Link>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 text-[#d4a43c] sm:grid-cols-3 text-center">
+        <div className="mt-10 grid grid-cols-1 gap-8 text-[#d4a43c] sm:grid-cols-3 text-center">
           <div>
             <Counter end={200} suffix="+" />
             <p className="mt-1 text-sm text-gray-300">Guest Capacity</p>
