@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { FiMenu, FiX, FiPhone } from "react-icons/fi";
 import { Link } from "react-router-dom";
-
+import Logo from "../assets/images/maple-logo.png";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
@@ -34,12 +34,23 @@ const Navbar = () => {
     <>
      
       <nav className="fixed top-0 left-0 w-full h-[72px] bg-[#F7F2EE] z-[10000] shadow-md">
-        <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
+        <div className="max-w-8xl mx-auto px-4 h-full flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-3">
+            {/* Logo – bigger on mobile */}
+            <div className="w-30 h-12 sm:w-14 sm:h-20 md:w-48 md:h-24 md:left-10 relative">
+              <img
+                src={Logo}
+                alt="Maple Banquet Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
 
-          
-          <h1 className="text-xl md:text-2xl font-bold text-[#7A1F1F]">
-            Maple Banquet
-          </h1>
+            {/* Text – only on large screens */}
+            {/* <span className="hidden lg:block text-xl md:text-2xl font-bold text-[#7A1F1F]">
+              Maple Banquet
+            </span> */}
+          </Link>
+
 
          
           <div className="hidden lg:flex items-center gap-8">

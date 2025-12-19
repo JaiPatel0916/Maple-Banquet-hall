@@ -1,6 +1,7 @@
 import React from "react";
 import heroImage from "../../assets/images/hero-banquet.jpg";
 import { Link } from "react-router-dom";
+import Counter from "../Counter";
 
 export default function HeroSection() {
   return (
@@ -41,19 +42,20 @@ export default function HeroSection() {
 
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 text-[#d4a43c] sm:grid-cols-3">
+
+        <div className="mt-14 grid grid-cols-1 gap-8 text-[#d4a43c] sm:grid-cols-3 text-center">
           <div>
-            <h3 className="text-3xl font-bold">200+</h3>
+            <Counter end={200} suffix="+" />
             <p className="mt-1 text-sm text-gray-300">Guest Capacity</p>
           </div>
 
           <div>
-            <h3 className="text-3xl font-bold">500+</h3>
+            <Counter end={500} suffix="+" />
             <p className="mt-1 text-sm text-gray-300">Events Hosted</p>
           </div>
 
           <div>
-            <h3 className="text-3xl font-bold">100%</h3>
+            <Counter end={100} suffix="%" />
             <p className="mt-1 text-sm text-gray-300">Satisfaction</p>
           </div>
         </div>
