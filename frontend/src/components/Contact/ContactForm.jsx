@@ -62,15 +62,11 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="relative bg-[#f6f2ee] py-[100px]">
+    <section className="relative bg-[#f6f2ee] py-[50px]">
       <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT */}
         <div>
-          <p className="text-[11px] uppercase tracking-[0.28em] font-semibold text-[#d4a43c] mb-3">
-            Contact Us
-          </p>
-
           <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-6">
             Let’s Create <br />
             <span className="italic text-[#d4a43c]">Unforgettable Moments</span>
