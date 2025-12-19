@@ -1,169 +1,225 @@
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Send
-} from "lucide-react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+
+const usedDates = ["2025-01-20", "2025-01-25", "2025-02-05"];
 
 const ContactSection = () => {
-  return (
-    <section className="bg-[#FFFFFF] py-[80px]">
-      <div className="mx-auto max-w-[1320px] px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    date: "",
+    eventType: "",
+    guests: "",
+    message: "",
+  });
 
-        <div className="bg-[#fffaf6] rounded-2xl p-6 md:p-10 shadow-sm">
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const validate = () => {
+    let newErrors = {};
+    if (!formData.name.trim()) newErrors.name = true;
+
+    
+    if (
+      formData.email &&
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
+    ) {
+      newErrors.email = true;
+    }
+
+    
+    if (!/^[6-9]\d{9}$/.test(formData.phone)) newErrors.phone = true;
+
+
+    if (!formData.date) {
+      newErrors.date = "required";
+    } else {
+      const selectedDate = new Date(formData.date);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      if (selectedDate <today) newErrors.date = "past";
+      if (usedDates.includes(formData.date)) newErrors.date = "booked";
+    }
+
+  
+    if (!formData.guests) newErrors.guests = true;
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      console.log("Submitted:", formData);
+    }
+  };
+
+  return (
+    <section className="relative bg-[#f6f2ee] py-[100px]">
+      <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        {/* LEFT */}
+        <div>
+          <p className="text-[11px] uppercase tracking-[0.28em] font-semibold text-[#d4a43c] mb-3">
+            Contact Us
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-6">
+            Let’s Create <br />
+            <span className="italic text-[#d4a43c]">Unforgettable Moments</span>
+          </h2>
+
+          <p className="text-[15px] text-[#6b6b6b] max-w-md mb-10">
+            Whether you're planning a wedding, celebration, or corporate event,
+            our team is ready to help.
+          </p>
+
+          <div className="space-y-6">
+            <Info icon={<Phone size={18} />} title="Phone" value="9579187450" />
+            <Info icon={<Mail size={18} />} title="Email" value="info@maplebanquet.com" />
+            <Info
+              icon={<MapPin size={18} />}
+              title="Address"
+              value="Rajapeth Bus Stop, Hudkeshwar Road, Nagpur – 440034"
+            />
+            <Info icon={<Clock size={18} />} title="Timings" value="12:00 PM – 11:30 PM" />
+          </div>
+        </div>
+
+        {/* FORM */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-[24px] shadow-xl p-8 md:p-10"
+        >
           <h3 className="text-[22px] font-serif font-semibold mb-6">
             Send an Inquiry
           </h3>
 
-          <form className="space-y-4 text-[13px]">
+          <form onSubmit={handleSubmit} className="space-y-5 text-[13px]">
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="font-medium">Your Name *</label>
-                <input
-                  type="text"
-                  placeholder="John Doe"
-                  className="mt-1 w-full rounded-md border border-[#e4ddd5] px-3 py-2"
-                />
-              </div>
-
-              <div>
-                <label className="font-medium">Email Address *</label>
-                <input
-                  type="email"
-                  placeholder="john@example.com"
-                  className="mt-1 w-full rounded-md border border-[#e4ddd5] px-3 py-2"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="font-medium">Phone Number *</label>
-                <input
-                  type="text"
-                  placeholder="+91 98765 43210"
-                  className="mt-1 w-full rounded-md border border-[#e4ddd5] px-3 py-2"
-                />
-              </div>
-
-              <div>
-                <label className="font-medium">Event Date *</label>
-                <input
-                  type="date"
-                  className="mt-1 w-full rounded-md border border-[#e4ddd5] px-3 py-2"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="font-medium">Event Type</label>
-                <select className="mt-1 w-full rounded-md border border-[#e4ddd5] px-3 py-2">
-                  <option>Select event type</option>
-                  <option>Anniversary</option>
-                  <option>Birthday</option>
-                  <option>Corporate Event</option>
-                  <option>Wedding</option>
-                  <option>Babyshower</option>
-                  <option>Engagement</option>
-                  <option>Family reunion</option>
-                  <option>Kitty Party</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="font-medium">Expected Guests</label>
-                <input
-                  type="number"
-                  placeholder="100"
-                  className="mt-1 w-full rounded-md border border-[#e4ddd5] px-3 py-2"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="font-medium">Additional Details</label>
-              <textarea
-                rows="4"
-                placeholder="Tell us more about your event requirements..."
-                className="mt-1 w-full rounded-md border border-[#e4ddd5] px-3 py-2"
+            <div className="grid md:grid-cols-2 gap-4">
+              <Input
+                name="name"
+                placeholder="Your Name *"
+                onChange={handleChange}
+                error={errors.name}
+              />
+              <Input
+                name="email"
+                placeholder="Email Address"
+                onChange={handleChange}
+                error={errors.email}
               />
             </div>
 
-            <button
-              type="submit"
-              className="mt-4 w-full flex items-center justify-center gap-2 rounded-md bg-[#d4a43c] py-3 text-[13px] font-semibold text-black hover:bg-[#c3922e]"
+            <div className="grid md:grid-cols-2 gap-4">
+              <Input
+                name="phone"
+                placeholder="WhatsApp Number *"
+                onChange={handleChange}
+                error={errors.phone}
+              />
+
+              <input
+                name="date"
+                type="text"
+                placeholder="Event Date *"
+                onFocus={(e) => (e.target.type = "date")}
+                onBlur={(e) => !e.target.value && (e.target.type = "text")}
+                onChange={handleChange}
+                className={`w-full border-b px-2 py-3 focus:outline-none ${
+                  errors.date ? "border-red-500" : "border-[#d8cfc4]"
+                }`}
+              />
+            </div>
+
+            {errors.date === "past" && (
+              <p className="text-red-500 text-xs">Past dates are not allowed</p>
+            )}
+            {errors.date === "booked" && (
+              <p className="text-red-500 text-xs">This date is already booked</p>
+            )}
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <select
+                name="eventType"
+                onChange={handleChange}
+                className="w-full border-b border-[#d8cfc4] px-2 py-3 bg-transparent"
+              >
+                <option value="">Select Event Type</option>
+                <option>Wedding</option>
+                <option>Birthday</option>
+                <option>Corporate Event</option>
+                <option>Engagement</option>
+                <option>Baby Shower</option>
+              </select>
+
+              <select
+                name="guests"
+                onChange={handleChange}
+                className={`w-full border-b px-2 py-3 bg-transparent ${
+                  errors.guests ? "border-red-500" : "border-[#d8cfc4]"
+                }`}
+              >
+                <option value="">Expected Guests *</option>
+                <option>15 – 30</option>
+                <option>30 – 70</option>
+                <option>70 – 150</option>
+                <option>150+</option>
+              </select>
+            </div>
+
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Tell us more about your event requirements..."
+              onChange={handleChange}
+              className="w-full border-b border-[#d8cfc4] px-2 py-3"
+            />
+
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="mt-6 w-full rounded-lg bg-[#d4a43c] py-3 font-semibold flex items-center justify-center gap-2"
             >
               <Send size={16} />
               Send Inquiry
-            </button>
-
+            </motion.button>
           </form>
-        </div>
-        <div>
-          <h3 className="text-[22px] font-serif font-semibold mb-4">
-            Get in Touch
-          </h3>
-          <p className="text-[13px] text-[#6b6b6b] mb-6 leading-relaxed">
-            Have questions about our venue or services? Our team is here to help you
-            plan the perfect event.
-          </p>
-
-          <div className="space-y-4">
-
-            <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
-              <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
-                <Phone size={18} className="text-[#d4a43c]" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-[14px]">Phone</h4>
-                <p className="text-[13px] text-[#d4a43c]">9579187450</p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
-              <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
-                <Mail size={18} className="text-[#d4a43c]" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-[14px]">Email</h4>
-                <p className="text-[13px] text-[#d4a43c]">
-                  info@maplebanquet.com
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
-              <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
-                <MapPin size={18} className="text-[#d4a43c]" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-[14px]">Address</h4>
-                <p className="text-[13px]">
-                  Rajapeth Bus Stop, Hudkeshwar Road, Nagpur - 440034
-                </p>
-              </div>
-            </div>
-
-            
-            <div className="flex gap-4 bg-[#f1ede8] rounded-xl p-5">
-              <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#f7e8c6]">
-                <Clock size={18} className="text-[#d4a43c]" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-[14px]">Timings</h4>
-                <p className="text-[13px]">12:00 PM - 11:30 PM</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );
 };
+
+const Input = ({ error, ...props }) => (
+  <input
+    {...props}
+    className={`w-full border-b px-2 py-3 focus:outline-none ${
+      error ? "border-red-500" : "border-[#d8cfc4]"
+    }`}
+  />
+);
+
+const Info = ({ icon, title, value }) => (
+  <div className="flex gap-4">
+    <div className="h-10 w-10 rounded-full bg-[#fbf3e3] flex items-center justify-center text-[#d4a43c]">
+      {icon}
+    </div>
+    <div>
+      <p className="text-sm font-semibold">{title}</p>
+      <p className="text-[13px] text-[#6b6b6b]">{value}</p>
+    </div>
+  </div>
+);
 
 export default ContactSection;
