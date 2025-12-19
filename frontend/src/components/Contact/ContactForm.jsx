@@ -62,7 +62,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="relative bg-[#f6f2ee] py-[50px]">
+    <section className="relative bg-[#FFFFFF py-[50px]">
       <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         <div>
