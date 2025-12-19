@@ -5,10 +5,10 @@ import AboutImage from "../../assets/images/hall.jpg";
 
 const AboutStory = () => {
     return (
-        <section className="bg-[#f6f2ee] pt-24 pb-20">
+        <section className="bg-[#FFFFF] pt-10 pb-20">
 
 
-            <div className="text-center max-w-3xl mx-auto px-4">
+           {/* <div className="text-center max-w-3xl mx-auto px-4">
                 <p className="text-sm tracking-widest text-[#b28a3b] font-semibold mb-2">
                     ABOUT US
                 </p>
@@ -22,7 +22,7 @@ const AboutStory = () => {
                     Maple Banquet is a unit of Chefin Hospitalities, dedicated to creating extraordinary
                     events and unforgettable memories in our elegant venue.
                 </p>
-            </div>
+            </div>*/}
 
 
             <div className="max-w-7xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch px-4 md:px-8">
