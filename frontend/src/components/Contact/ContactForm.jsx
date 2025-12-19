@@ -156,11 +156,14 @@ const ContactSection = () => {
                 className="w-full border-b border-[#d8cfc4] px-2 py-3 bg-transparent"
               >
                 <option value="">Select Event Type</option>
-                <option>Wedding</option>
-                <option>Birthday</option>
+              
                 <option>Corporate Event</option>
+                <option>Birthday</option>
                 <option>Engagement</option>
                 <option>Baby Shower</option>
+                <option>Kitty Parties</option>
+                <option>Family Reunions</option>
+                 <option>Wedding</option>
               </select>
 
               <select
