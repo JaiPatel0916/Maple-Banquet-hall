@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const ContactHeader = () => {
   return (
-    <section className="bg-[#f6f2ee] py-[80px]">
+    <section className="bg-[#f6f2ee] py-[120px]">
       <div className="mx-auto max-w-[1320px] px-6 text-center">
 
         <motion.p

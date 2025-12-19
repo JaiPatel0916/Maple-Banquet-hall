@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutHeroSection = () => {
   return (
-    <section className="bg-[#f6f2ee] py-24 md:py-22">
+    <section className="bg-[#f6f2ee] py-20 md:py-22">
       <div className="max-w-5xl mx-auto px-6 text-center">
 
         {/* Small label */}
