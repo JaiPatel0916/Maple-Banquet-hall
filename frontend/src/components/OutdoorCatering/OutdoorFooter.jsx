@@ -70,7 +70,7 @@ const Footer = () => {
                         >
                             <FaInstagram size={16} />
                         </a>
-
+{/* 
                         <a
                             href="#"
                             aria-label="YouTube"
@@ -80,7 +80,7 @@ const Footer = () => {
                    hover:-translate-y-1 hover:scale-110"
                         >
                             <FaYoutube size={16} />
-                        </a>
+                        </a> */}
                     </div>
 
                 </div>
@@ -136,13 +136,14 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-
-            <div className="border-t border-gray-600 mt-14 pt-4 flex flex-col md:flex-row justify-between text-black-300 text-sm">
-                <p>© 2025 Maple Banquet. All rights reserved.</p>
-
+            <div className="border-t border-gray-600 mt-14 pt-4 flex flex-col md:flex-row justify-between text-sm">
+                {/* <p>© 2025 Maple Banquet. All rights reserved.</p> */}
                 <div className="flex gap-6 mt-3 md:mt-0">
-                    <a href="#" className="hover:text-[#D29922] text-black">Privacy Policy</a>
-                    <a href="#" className="hover:text-[#D29922] text-black">Terms of Service</a>
+                    {/* <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a> */}
+                    <Link to="https://tars.co.in/">
+                        <p>Design and Developed with love by TARS TECHNOLOGIES</p>
+                    </Link>
                 </div>
             </div>
         </footer>
