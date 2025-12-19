@@ -65,7 +65,6 @@ const ContactSection = () => {
     <section className="relative bg-[#f6f2ee] py-[50px]">
       <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        {/* LEFT */}
         <div>
           <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-6">
             Let’s Create <br />
@@ -89,7 +88,7 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* FORM */}
+      
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
