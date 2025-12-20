@@ -2,7 +2,9 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
+
 import adminRoutes from "./routes/admin.routes.js";
+import contactRoutes from "./routes/contact.routes.js";
 
 dotenv.config();
 connectDB();
@@ -12,9 +14,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
+/* ADMIN AUTH ROUTES */
 app.use("/api/admin", adminRoutes);
 
+/* CONTACT ROUTES (PUBLIC + ADMIN) */
+app.use("/api/contact", contactRoutes);
 
 app.get("/", (req, res) => {
     res.send("Admin backend running 🚀");
