@@ -1,11 +1,20 @@
 import express from "express";
 import {
     createContact,
-    getAllContacts
+    getAllContacts,
+    updateContactStatus,
+    deleteContact,
 } from "../controllers/contact.controller.js";
 import { protectAdmin } from "../middleware/auth.middleware.js";
+
 const router = express.Router();
 
+/* PUBLIC */
 router.post("/", createContact);
-router.get("/admin/contacts", protectAdmin, getAllContacts);
+
+/* ADMIN */
+router.get("/admin", protectAdmin, getAllContacts);
+router.patch("/admin/:id/status", protectAdmin, updateContactStatus);
+router.delete("/admin/:id", protectAdmin, deleteContact);
+
 export default router;
