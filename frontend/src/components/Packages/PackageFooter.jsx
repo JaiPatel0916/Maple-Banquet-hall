@@ -123,7 +123,7 @@ const Footer = () => {
 
                     <div className="flex items-center gap-3 mb-4">
                         <FiPhone className="text-[#D29922] text-xl" />
-                        <p>9579187450</p>
+                        <p>9579187450 , 8600149177</p>
                     </div>
 
                     <div className="flex items-center gap-3 mb-4">
@@ -143,8 +143,8 @@ const Footer = () => {
                 <div className="flex gap-6 mt-3 md:mt-0">
                     {/* <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a> */}
-                    <Link to="https://tars.co.in/">
-                        <p>Design and Developed with love by TARS TECHNOLOGIES</p>
+                    <Link to="https://tarstech.in/">
+                        <p>Design and Developed with ❤️ by TARS TECHNOLOGIES</p>
                     </Link>
                 </div>
             </div>
