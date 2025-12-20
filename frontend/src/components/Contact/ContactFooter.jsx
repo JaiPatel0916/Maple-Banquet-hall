@@ -138,16 +138,21 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="border-t border-gray-600 mt-14 pt-4 flex flex-col md:flex-row justify-between text-sm">
-                {/* <p>© 2025 Maple Banquet. All rights reserved.</p> */}
-                <div className="flex gap-6 mt-3 md:mt-0">
-                    {/* <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a> */}
-                    <Link to="https://tarstech.in/">
-                        <p>Design and Developed with ❤️ by TARS TECHNOLOGIES</p>
+
+            <div className="border-t border-gray-600 mt-14 pt-4">
+                <div className="flex justify-start md:justify-center text-sm">
+                    <Link
+                        to="https://tarstech.in/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-[#D29922] transition"
+                    >
+                        Design and Developed with ❤️ by <span className="font-semibold">TARS TECHNOLOGIES</span>
                     </Link>
                 </div>
             </div>
+
+
         </footer>
     );
 };
