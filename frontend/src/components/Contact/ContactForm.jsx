@@ -54,12 +54,47 @@ const ContactSection = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      console.log("Submitted:", formData);
+
+    if (!validate()) return;
+
+    try {
+      const res = await fetch(
+        "http://localhost:5001/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        alert(data.message || "Something went wrong");
+        return;
+      }
+
+      alert("Inquiry sent successfully!");
+
+   
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        date: "",
+        eventType: "",
+        guests: "",
+        message: "",
+      });
+    } catch (error) {
+      alert("Server error. Please try again later.");
     }
   };
+
   const today = new Date();
   const minDate = today.toISOString().split("T")[0];
 
