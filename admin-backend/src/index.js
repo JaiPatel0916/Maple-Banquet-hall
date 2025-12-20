@@ -14,10 +14,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-/* ADMIN AUTH ROUTES */
 app.use("/api/admin", adminRoutes);
 
-/* CONTACT ROUTES (PUBLIC + ADMIN) */
 app.use("/api/contact", contactRoutes);
 
 app.get("/", (req, res) => {
