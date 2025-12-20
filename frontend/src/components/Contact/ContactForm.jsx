@@ -60,6 +60,15 @@ const ContactSection = () => {
       console.log("Submitted:", formData);
     }
   };
+  const today = new Date();
+  const minDate = today.toISOString().split("T")[0];
+
+  // Create max date = today + 1 year
+  const maxDateObj = new Date();
+  maxDateObj.setFullYear(maxDateObj.getFullYear() + 1);
+  const maxDate = maxDateObj.toISOString().split("T")[0];
+
+
 
   return (
     <section className="relative bg-[#FFFFFF py-[50px]">
@@ -123,18 +132,17 @@ const ContactSection = () => {
                 onChange={handleChange}
                 error={errors.phone}
               />
-
               <input
                 name="date"
-                type="text"
-                placeholder="Event Date *"
-                onFocus={(e) => (e.target.type = "date")}
-                onBlur={(e) => !e.target.value && (e.target.type = "text")}
+                type="date"
+                min={minDate}      // ❌ blocks past dates
+                max={maxDate}      // ❌ blocks dates beyond 1 year
                 onChange={handleChange}
-                className={`w-full border-b px-2 py-3 focus:outline-none ${
-                  errors.date ? "border-red-500" : "border-[#d8cfc4]"
-                }`}
+                className={`w-full border-b px-2 py-3 focus:outline-none ${errors.date ? "border-red-500" : "border-[#d8cfc4]"
+                  }`}
               />
+
+
             </div>
 
             {errors.date === "past" && (
@@ -143,6 +151,12 @@ const ContactSection = () => {
             {errors.date === "booked" && (
               <p className="text-red-500 text-xs">This date is already booked</p>
             )}
+            {errors.date === "future-limit" && (
+              <p className="text-red-500 text-xs">
+                You can only book up to 1 year in advance
+              </p>
+            )}
+
 
             <div className="grid md:grid-cols-2 gap-4">
               <select
