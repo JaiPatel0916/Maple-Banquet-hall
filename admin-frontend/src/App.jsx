@@ -1,21 +1,44 @@
-import React from 'react';
-// Ensure your main CSS file is imported, typically index.css or App.css
-import './index.css';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import ContactBookings from "./pages/ContactBookings";
+import ProtectedRoute from "./components/ProtectedRoute";
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="p-10 bg-white rounded-xl shadow-lg">
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-4">
-          Hello Tailwind CSS!
-        </h1>
-        <p className="text-green-600 text-lg">
-          If this text is blue and bold, Tailwind CSS is working!
-        </p>
-        <button className="mt-4 px-4 py-2 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
-          Test Button
-        </button>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* Default redirect */}
+        <Route path="/" element={<Navigate to="/login" />} />
+
+        {/* Login */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Dashboard layout */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Contact & Bookings (inside admin) */}
+        <Route
+          path="/dashboard/contacts"
+          element={
+            <ProtectedRoute>
+              <ContactBookings />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Fallback */}
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+
+export default App;
