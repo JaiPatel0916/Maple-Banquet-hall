@@ -183,10 +183,10 @@ const ContactSection = () => {
                 }`}
               >
                 <option value="">Expected Guests *</option>
-                <option>15 – 30</option>
-                <option>30 – 70</option>
-                <option>70 – 150</option>
-                <option>150+</option>
+                <option>10 – 15</option>
+                <option>16 – 50</option>
+                <option>51 – 100</option>
+                <option>100+</option>
               </select>
             </div>
 
