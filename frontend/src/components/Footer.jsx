@@ -44,7 +44,7 @@ const Footer = () => {
                         />
                     </div>
 
-                    <p className="leading-relaxed mb-4">
+                    <p className="leading-relaxed mb-4 text-justify">
                         Creating unforgettable moments in our elegant venue.
                         Your perfect celebration starts here with our exceptional
                         service and stunning ambiance.

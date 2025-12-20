@@ -24,14 +24,14 @@ export default function StageAreaSection() {
               Beautiful Stage Setup
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-relaxed">
+            <p className="mt-6 text-gray-600 leading-relaxed text-justify">
               Our basic stage setup provides the perfect focal point for your
               event. With elegant drapery, professional lighting, and floral
               arrangements, the stage becomes the centerpiece of your
               celebration.
             </p>
 
-            <p className="mt-4 text-gray-600 leading-relaxed">
+            <p className="mt-4 text-gray-600 leading-relaxed text-justify">
               The stage area is designed to accommodate various setups including
               wedding mandaps, engagement décor, corporate presentations, and
               performance spaces.

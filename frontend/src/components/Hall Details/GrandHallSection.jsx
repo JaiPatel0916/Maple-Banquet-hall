@@ -16,14 +16,14 @@ export default function GrandHallSection() {
               The Grand Hall
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-relaxed">
+            <p className="mt-6 text-gray-600 leading-relaxed text-justify">
               Our magnificent grand hall is designed to accommodate up to 200
               guests comfortably. Featuring ornate ceiling designs with elegant
               chandeliers, the space creates a breathtaking ambience for any
               occasion.
             </p>
 
-            <p className="mt-4 text-gray-600 leading-relaxed">
+            <p className="mt-4 text-gray-600 leading-relaxed text-justify">
               The hall features beautiful golden accents, luxurious drapes, and
               premium flooring that adds to the sophisticated atmosphere.
               Whether it's a wedding reception, engagement ceremony, or

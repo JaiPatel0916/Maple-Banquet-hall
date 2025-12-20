@@ -54,13 +54,13 @@ const AboutStory = () => {
                         A Legacy of Celebration
                     </h3>
 
-                    <p className="text-gray-700 leading-relaxed mb-6">
+                    <p className="text-gray-700 leading-relaxed mb-6 text-justify">
                         Maple Banquet was born from a simple vision: to create a space where every celebration
                         becomes a cherished memory. Located in the heart of Nagpur at Hudkeshwar Road, we have
                         established ourselves as one of the premier banquet venues in the region.
                     </p>
 
-                    <p className="text-gray-700 leading-relaxed mb-8">
+                    <p className="text-gray-700 leading-relaxed mb-8 text-justify">
                         Our beautifully designed interiors, featuring elegant chandeliers and sophisticated décor,
                         provide the perfect backdrop for weddings, engagements, birthday parties, corporate events,
                         and all your special occasions.
