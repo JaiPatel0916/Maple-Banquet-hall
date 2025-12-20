@@ -1,6 +1,5 @@
 import Contact from "../models/Contact.js";
 
-/* CREATE CONTACT (PUBLIC) */
 export const createContact = async (req, res) => {
     try {
         const {
@@ -57,7 +56,6 @@ export const createContact = async (req, res) => {
     }
 };
 
-/* GET ALL CONTACTS (ADMIN ONLY) */
 export const getAllContacts = async (req, res) => {
     try {
         const contacts = await Contact.find().sort({ createdAt: -1 });
