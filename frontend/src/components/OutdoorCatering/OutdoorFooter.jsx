@@ -27,63 +27,63 @@ const Footer = () => {
             </div> */}
 
             {/* Main Footer Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-black-200">
-
-                {/* Brand */}
-                <div>
-                    <div className="flex items-center gap-3 mb-4">
-                        <img
-                            src={Logo}
-                            alt="Maple Banquet Logo"
-                            className="w-[660px] h-[160px] object-contain"
-                        />
-                        {/* <div>
-                            <h3 className="text-xl font-bold text-white">Maple Banquet</h3>
-                            <p className="text-sm text-gray-300">A unit of Chefin Hospitalities</p>
-                        </div> */}
-                    </div>
-
-                    <p className="text-black-300 leading-relaxed mb-4">
-                        Creating unforgettable moments in our elegant venue. Your perfect celebration starts here with our exceptional service and stunning ambiance.
-                    </p>
-
-                
-                    <div className="flex gap-4 mt-4">
-                        <a
-                            href="https://www.facebook.com/share/r/17nTKeUDpv/?mibextid=wwXIfr"
-                            aria-label="Facebook"
-                            className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
-                   transition-all duration-300 ease-out
-                   hover:bg-[#D29922] hover:text-black
-                   hover:-translate-y-1 hover:scale-110"
-                        >
-                            <FaFacebookF size={16} />
-                        </a>
-
-                        <a
-                            href="https://www.instagram.com/maple.banquet?igsh=bGV5NzR6bGc4eWV5"
-                            aria-label="Instagram"
-                            className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
-                   transition-all duration-300 ease-out
-                   hover:bg-[#D29922] hover:text-black
-                   hover:-translate-y-1 hover:scale-110"
-                        >
-                            <FaInstagram size={16} />
-                        </a>
-{/* 
-                        <a
-                            href="#"
-                            aria-label="YouTube"
-                            className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
-                   transition-all duration-300 ease-out
-                   hover:bg-[#D29922] hover:text-black
-                   hover:-translate-y-1 hover:scale-110"
-                        >
-                            <FaYoutube size={16} />
-                        </a> */}
-                    </div>
-
-                </div>
+           
+                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 items-start">
+           
+                          
+                           <div className="flex flex-col items-start">
+           
+                           
+                               <div className="w-72 h-[90px] overflow-hidden mb-3">
+                                   <img
+                                       src={Logo}
+                                       alt="Maple Banquet Logo"
+                                       className="w-full h-full object-contain object-top"
+                                   />
+                               </div>
+           
+                               <p className="leading-relaxed mb-4 text-justify">
+                                   Creating unforgettable moments in our elegant venue.
+                                   Your perfect celebration starts here with our exceptional
+                                   service and stunning ambiance.
+                               </p>
+           
+                               <div className="flex gap-4 mt-4">
+                                   <a
+                                       href="https://www.facebook.com/share/r/17nTKeUDpv/?mibextid=wwXIfr"
+                                       aria-label="Facebook"
+                                       className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
+                              transition-all duration-300 ease-out
+                              hover:bg-[#D29922] hover:text-black
+                              hover:-translate-y-1 hover:scale-110"
+                                   >
+                                       <FaFacebookF size={16} />
+                                   </a>
+           
+                                   <a
+                                       href="https://www.instagram.com/maple.banquet?igsh=bGV5NzR6bGc4eWV5"
+                                       aria-label="Instagram"
+                                       className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
+                              transition-all duration-300 ease-out
+                              hover:bg-[#D29922] hover:text-black
+                              hover:-translate-y-1 hover:scale-110"
+                                   >
+                                       <FaInstagram size={16} />
+                                   </a>
+           
+                                   {/* <a
+                                       href="#"
+                                       aria-label="YouTube"
+                                       className="group flex items-center justify-center w-10 h-10 rounded-full border border-[#D29922] text-[#D29922]
+                              transition-all duration-300 ease-out
+                              hover:bg-[#D29922] hover:text-black
+                              hover:-translate-y-1 hover:scale-110"
+                                   >
+                                       <FaYoutube size={16} />
+                                   </a> */}
+                               </div>
+           
+                           </div>
 
                 <div>
                     <h3 className="text-xl font-bold text-[#D29922] mb-4">Quick Links</h3>

@@ -16,13 +16,13 @@ export default function LoungeSection() {
               Elegant Lounge Area
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-relaxed">
+            <p className="mt-6 text-gray-600 leading-relaxed text-justify">
               Our sophisticated lounge area features plush white leather sofas
               and elegant furnishings, creating a refined space for your guests
               to relax and socialize.
             </p>
 
-            <p className="mt-4 text-gray-600 leading-relaxed">
+            <p className="mt-4 text-gray-600 leading-relaxed text-justify">
               Perfect for pre-event gatherings, cocktail hours, or simply
               providing a comfortable retreat from the main celebration area.
             </p>

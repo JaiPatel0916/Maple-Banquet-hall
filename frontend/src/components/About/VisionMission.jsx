@@ -18,7 +18,7 @@ const VisionMission = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
                  
-                    <div className="bg-white rounded-2xl p-10 shadow-md text-justify">
+                    <div className="bg-white rounded-2xl p-10 shadow-md text-left">
                         <div className="h-12 w-12 flex items-center justify-center rounded-full bg-[#f5ecd6] mb-6">
                             <Eye className="text-[#D29922]" />
                         </div>
@@ -27,7 +27,7 @@ const VisionMission = () => {
                             Our Vision
                         </h3>
 
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed text-justify-left">
                             To be the most trusted and celebrated banquet venue in Nagpur,
                             known for transforming every celebration into an extraordinary
                             experience that exceeds expectations and creates lasting
@@ -35,8 +35,8 @@ const VisionMission = () => {
                         </p>
                     </div>
 
-                    {/* Mission */}
-                    <div className="bg-white rounded-2xl p-10 shadow-md text-justify">
+        
+                    <div className="bg-white rounded-2xl p-10 shadow-md text-left">
                         <div className="h-12 w-12 flex items-center justify-center rounded-full bg-[#f5ecd6] mb-6">
                             <Target className="text-[#D29922]" />
                         </div>
@@ -45,7 +45,7 @@ const VisionMission = () => {
                             Our Mission
                         </h3>
 
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed text-justify-left">
                             To deliver exceptional hospitality services with unwavering
                             commitment to quality, personalized attention, and innovative
                             solutions ensuring every client’s event is executed flawlessly
