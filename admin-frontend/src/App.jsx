@@ -10,10 +10,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Login */}
         <Route path="/login" element={<Login />} />
 
-        {/* ADMIN ROUTES */}
         <Route
           path="/dashboard"
           element={
@@ -22,15 +20,12 @@ function App() {
             </ProtectedRoute>
           }
         >
-          {/* Default dashboard page */}
           <Route index element={<DashboardHome />} />
 
-          {/* Pages */}
           <Route path="contacts" element={<ContactBookings />} />
           <Route path="menu" element={<MenuManagement />} />
         </Route>
 
-        {/* Fallback */}
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>

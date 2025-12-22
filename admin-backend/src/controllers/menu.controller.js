@@ -1,6 +1,5 @@
 import MenuItem from "../models/MenuItem.js";
 
-/* CREATE MENU ITEM */
 export const createMenu = async (req, res) => {
     try {
         const { name, category, type } = req.body;
@@ -13,7 +12,7 @@ export const createMenu = async (req, res) => {
             name,
             category,
             type,
-            image: req.file.path, // Cloudinary URL
+            image: req.file.path, 
         });
 
         res.status(201).json(item);
@@ -23,13 +22,11 @@ export const createMenu = async (req, res) => {
     }
 };
 
-/* GET ALL MENU ITEMS */
 export const getMenus = async (req, res) => {
     const items = await MenuItem.find().sort({ createdAt: -1 });
     res.json(items);
 };
 
-/* TOGGLE AVAILABILITY */
 export const toggleAvailability = async (req, res) => {
     try {
         const menu = await MenuItem.findById(req.params.id);
@@ -49,13 +46,11 @@ export const toggleAvailability = async (req, res) => {
     }
 };
 
-/* DELETE MENU ITEM */
 export const deleteMenu = async (req, res) => {
     await MenuItem.findByIdAndDelete(req.params.id);
     res.json({ message: "Menu item deleted" });
 };
 
-/* UPDATE MENU ITEM */
 export const updateMenu = async (req, res) => {
     try {
         const { name, category, type } = req.body;
@@ -65,14 +60,13 @@ export const updateMenu = async (req, res) => {
             return res.status(404).json({ message: "Menu item not found" });
         }
 
-        // Update fields
+       
         menu.name = name || menu.name;
         menu.category = category || menu.category;
         menu.type = type || menu.type;
 
-        // If new image uploaded, replace image
         if (req.file) {
-            menu.image = req.file.path; // new Cloudinary URL
+            menu.image = req.file.path; 
         }
 
         await menu.save();

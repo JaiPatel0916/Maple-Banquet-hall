@@ -18,7 +18,6 @@ const ContactBookings = () => {
         fetchContacts();
     }, []);
 
-    // ✅ SINGLE STATUS UPDATE FUNCTION
     const updateStatus = async (id, status) => {
         try {
             await axios.patch(`/contact/admin/${id}/status`, { status });
@@ -114,7 +113,6 @@ const ContactBookings = () => {
                 </tbody>
             </table>
 
-            {/* VIEW MODAL */}
             {selected && (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
                     <div className="bg-white p-6 w-[500px] rounded">
