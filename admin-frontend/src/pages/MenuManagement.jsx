@@ -61,19 +61,31 @@ const MenuManagement = () => {
 
             <form
                 onSubmit={addMenu}
-                className="grid md:grid-cols-5 gap-4 bg-gray-50 p-4 rounded mb-6"
+                className="
+    grid 
+    grid-cols-1 
+    sm:grid-cols-2 
+    lg:grid-cols-5 
+    gap-4 
+    bg-gray-50 
+    p-4 
+    rounded 
+    mb-6
+  "
             >
+        
                 <input
                     required
                     placeholder="Item Name"
-                    className="border p-2 rounded"
+                    className="border p-2 rounded w-full"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                 />
 
+         
                 <select
                     required
-                    className="border p-2 rounded"
+                    className="border p-2 rounded w-full"
                     value={form.category}
                     onChange={(e) => setForm({ ...form, category: e.target.value })}
                 >
@@ -85,9 +97,9 @@ const MenuManagement = () => {
                     ))}
                 </select>
 
-
+             
                 <select
-                    className="border p-2 rounded"
+                    className="border p-2 rounded w-full"
                     value={form.type}
                     onChange={(e) => setForm({ ...form, type: e.target.value })}
                 >
@@ -95,18 +107,34 @@ const MenuManagement = () => {
                     <option>Non-Veg</option>
                 </select>
 
+            
                 <input
                     type="file"
                     required
+                    className="w-full text-sm"
                     onChange={(e) => setForm({ ...form, image: e.target.files[0] })}
                 />
 
-                <button className="bg-green-600 text-white rounded px-4">
+   
+                <button
+                    type="submit"
+                    className="
+      bg-green-600 
+      text-white 
+      rounded 
+      px-4 
+      py-2 
+      w-full 
+      sm:col-span-2 
+      lg:col-span-1
+      hover:bg-green-700
+      transition
+    "
+                >
                     Add Item
                 </button>
             </form>
 
-        
             <div className="overflow-x-auto">
                 <table className="w-full border-collapse text-sm">
                     <thead className="bg-gray-100">
