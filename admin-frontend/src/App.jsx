@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import ContactBookings from "./pages/ContactBookings";
+import MenuManagement from "./pages/MenuManagement";
+import DashboardHome from "./pages/DashboardHome";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminLayout from "./layouts/AdminLayout";
 
@@ -8,12 +10,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-  
-        <Route path="/" element={<Navigate to="/login" />} />
-
         {/* Login */}
         <Route path="/login" element={<Login />} />
 
+        {/* ADMIN ROUTES */}
         <Route
           path="/dashboard"
           element={
@@ -22,17 +22,15 @@ function App() {
             </ProtectedRoute>
           }
         >
+          {/* Default dashboard page */}
+          <Route index element={<DashboardHome />} />
 
-          <Route index element={<p>Select an option above</p>} />
-
-        
+          {/* Pages */}
           <Route path="contacts" element={<ContactBookings />} />
-
-          <Route path="catering" element={<p>Catering admin coming next</p>} />
-          <Route path="stats" element={<p>Stats coming next</p>} />
+          <Route path="menu" element={<MenuManagement />} />
         </Route>
 
-
+        {/* Fallback */}
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>
