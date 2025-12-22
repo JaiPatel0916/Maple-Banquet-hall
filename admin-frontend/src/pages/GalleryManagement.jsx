@@ -40,7 +40,6 @@ const GalleryManagement = () => {
         <div>
             <h2 className="text-xl font-bold mb-6">Gallery Management</h2>
 
-            {/* UPLOAD */}
             <form
                 onSubmit={uploadImage}
                 className="flex flex-wrap gap-4 mb-8"
@@ -62,7 +61,6 @@ const GalleryManagement = () => {
                 </button>
             </form>
 
-            {/* GRID */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                 {images.map((img) => (
                     <div key={img._id} className="border rounded overflow-hidden">

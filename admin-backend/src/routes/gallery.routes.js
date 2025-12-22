@@ -11,23 +11,21 @@ import {
 
 const router = express.Router();
 
-/* PUBLIC */
 router.get("/", getPublicGallery);
 
-/* ADMIN */
 router.get("/admin", protectAdmin, getAdminGallery);
 
 router.post(
     "/admin",
     protectAdmin,
-    uploadGallery.single("image"), // ✅ gallery upload
+    uploadGallery.single("image"), 
     createGalleryImage
 );
 
 router.put(
     "/admin/:id",
     protectAdmin,
-    uploadGallery.single("image"), // ✅ replace image
+    uploadGallery.single("image"), 
     updateGalleryImage
 );
 
