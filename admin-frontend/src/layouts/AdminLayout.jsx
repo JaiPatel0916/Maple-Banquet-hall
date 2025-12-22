@@ -39,6 +39,13 @@ const AdminLayout = () => {
                     <h2 className="text-lg font-semibold">Outdoor Catering</h2>
                     <p className="text-sm text-gray-600">Manage menu</p>
                 </div>
+                <div
+                    onClick={() => navigate("/dashboard/gallery")}
+                    className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg"
+                >
+                    <h2 className="text-lg font-semibold">Gallery</h2>
+                    <p className="text-sm text-gray-600">Manage gallery images</p>
+                </div>
 
                 <div
                     onClick={() => navigate("/dashboard/stats")}
