@@ -7,7 +7,7 @@ import {
     updateMenu,
 } from "../controllers/menu.controller.js";
 import { protectAdmin } from "../middleware/auth.middleware.js";
-import upload from "../middleware/upload.js"; // ✅ ADD THIS
+import upload from "../middleware/upload.js"; 
 import MenuItem from "../models/MenuItem.js";
 
 
@@ -19,20 +19,20 @@ router.get("/admin", protectAdmin, getMenus);
 router.post(
     "/admin",
     protectAdmin,
-    upload.single("image"), // ✅ REQUIRED
+    upload.single("image"), 
     createMenu
 );
 router.put(
     "/admin/:id",
     protectAdmin,
-    upload.single("image"), // optional image
+    upload.single("image"),
     updateMenu
 );
 router.delete("/admin/:id", protectAdmin, deleteMenu);
 router.put("/admin/:id/toggle", protectAdmin, toggleAvailability);
 
 
-// PUBLIC – CLIENT SIDE
+
 router.get("/public", async (req, res) => {
     const items = await MenuItem.find({ isAvailable: true })
         .sort({ category: 1, createdAt: -1 });

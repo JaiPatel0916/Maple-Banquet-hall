@@ -29,7 +29,6 @@ const MenuManagement = () => {
         fetchMenus();
     }, []);
 
-    /* ADD MENU ITEM */
     const addMenu = async (e) => {
         e.preventDefault();
 
@@ -44,13 +43,12 @@ const MenuManagement = () => {
         fetchMenus();
     };
 
-    /* TOGGLE */
+    
     const toggleAvailability = async (id) => {
         await axios.put(`/menu/admin/${id}/toggle`);
         fetchMenus();
     };
 
-    /* DELETE */
     const deleteMenu = async (id) => {
         if (!window.confirm("Delete this menu item?")) return;
         await axios.delete(`/menu/admin/${id}`);
@@ -61,7 +59,6 @@ const MenuManagement = () => {
         <div>
             <h2 className="text-xl font-bold mb-4">Outdoor Catering Menu</h2>
 
-            {/* ADD FORM */}
             <form
                 onSubmit={addMenu}
                 className="grid md:grid-cols-5 gap-4 bg-gray-50 p-4 rounded mb-6"
@@ -109,8 +106,7 @@ const MenuManagement = () => {
                 </button>
             </form>
 
-            {/* TABLE */}
-            {/* TABLE */}
+        
             <div className="overflow-x-auto">
                 <table className="w-full border-collapse text-sm">
                     <thead className="bg-gray-100">
@@ -130,7 +126,6 @@ const MenuManagement = () => {
                                 key={m._id}
                                 className="border-t hover:bg-gray-50 transition"
                             >
-                                {/* IMAGE */}
                                 <td className="p-3">
                                     <img
                                         src={m.image}
@@ -139,17 +134,14 @@ const MenuManagement = () => {
                                     />
                                 </td>
 
-                                {/* NAME */}
                                 <td className="p-3 font-medium">
                                     {m.name}
                                 </td>
 
-                                {/* CATEGORY */}
                                 <td className="p-3">
                                     {m.category}
                                 </td>
 
-                                {/* TYPE */}
                                 <td className="p-3">
                                     <span
                                         className={`px-2 py-1 rounded text-xs font-medium
@@ -162,7 +154,6 @@ const MenuManagement = () => {
                                     </span>
                                 </td>
 
-                                {/* STATUS */}
                                 <td className="p-3">
                                     <span
                                         className={`font-medium
@@ -175,7 +166,6 @@ const MenuManagement = () => {
                                     </span>
                                 </td>
 
-                                {/* ACTIONS */}
                                 <td className="p-3">
                                     <div className="flex justify-center gap-2">
                                         <button
@@ -262,7 +252,6 @@ const MenuManagement = () => {
                                 <option>Non-Veg</option>
                             </select>
 
-                            {/* IMAGE PREVIEW */}
                             <img
                                 src={editItem.image}
                                 alt="preview"
