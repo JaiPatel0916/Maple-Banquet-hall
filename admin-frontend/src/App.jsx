@@ -1,40 +1,38 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
 import ContactBookings from "./pages/ContactBookings";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AdminLayout from "./layouts/AdminLayout";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Default redirect */}
+  
         <Route path="/" element={<Navigate to="/login" />} />
 
         {/* Login */}
         <Route path="/login" element={<Login />} />
 
-        {/* Dashboard layout */}
         <Route
           path="/dashboard"
           element={
             <ProtectedRoute>
-              <Dashboard />
+              <AdminLayout />
             </ProtectedRoute>
           }
-        />
+        >
 
-        {/* Contact & Bookings (inside admin) */}
-        <Route
-          path="/dashboard/contacts"
-          element={
-            <ProtectedRoute>
-              <ContactBookings />
-            </ProtectedRoute>
-          }
-        />
+          <Route index element={<p>Select an option above</p>} />
 
-        {/* Fallback */}
+        
+          <Route path="contacts" element={<ContactBookings />} />
+
+          <Route path="catering" element={<p>Catering admin coming next</p>} />
+          <Route path="stats" element={<p>Stats coming next</p>} />
+        </Route>
+
+
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>
