@@ -56,7 +56,7 @@ const AdminLayout = () => {
                 </div>
             </div>
 
-            {/* PAGE CONTENT */}
+          
             <div className="bg-white rounded shadow p-6">
                 <Outlet />
             </div>

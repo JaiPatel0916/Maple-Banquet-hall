@@ -1,18 +1,18 @@
 import GalleryImage from "../models/GalleryImage.js";
 
-/* ADMIN: GET ALL */
+
 export const getAdminGallery = async (req, res) => {
     const images = await GalleryImage.find().sort({ createdAt: -1 });
     res.json(images);
 };
 
-/* PUBLIC: GET ALL */
+
 export const getPublicGallery = async (req, res) => {
     const images = await GalleryImage.find().sort({ createdAt: -1 });
     res.json(images);
 };
 
-/* ADMIN: CREATE */
+
 export const createGalleryImage = async (req, res) => {
     try {
         if (!req.file || !req.body.category) {
@@ -31,7 +31,7 @@ export const createGalleryImage = async (req, res) => {
     }
 };
 
-/* ADMIN: UPDATE */
+
 export const updateGalleryImage = async (req, res) => {
     try {
         const image = await GalleryImage.findById(req.params.id);
@@ -54,7 +54,7 @@ export const updateGalleryImage = async (req, res) => {
     }
 };
 
-/* ADMIN: DELETE */
+
 export const deleteGalleryImage = async (req, res) => {
     await GalleryImage.findByIdAndDelete(req.params.id);
     res.json({ message: "Image deleted" });
