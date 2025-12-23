@@ -2,11 +2,11 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
-
 import adminRoutes from "./routes/admin.routes.js";
 import contactRoutes from "./routes/contact.routes.js";
 import menuRoutes from "./routes/menu.routes.js";
 import galleryRoutes from "./routes/gallery.routes.js";
+import popupRoutes from "./routes/popup.routes.js";
 
 dotenv.config();
 connectDB();
@@ -20,6 +20,8 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/menu", menuRoutes);
 app.use("/api/gallery", galleryRoutes);
+app.use("/api/popup", popupRoutes);
+
 
 app.get("/", (req, res) => {
     res.send("Admin backend running ");

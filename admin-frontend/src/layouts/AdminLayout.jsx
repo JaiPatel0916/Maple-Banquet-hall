@@ -46,6 +46,16 @@ const AdminLayout = () => {
                     <h2 className="text-lg font-semibold">Gallery</h2>
                     <p className="text-sm text-gray-600">Manage gallery images</p>
                 </div>
+                <div
+                    onClick={() => navigate("/dashboard/popup")}
+                    className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg"
+                >
+                    <h2 className="text-lg font-semibold">Popup Manager</h2>
+                    <p className="text-sm text-gray-600">
+                        Manage website popups
+                    </p>
+                </div>
+
 
                 <div
                     onClick={() => navigate("/dashboard/stats")}
