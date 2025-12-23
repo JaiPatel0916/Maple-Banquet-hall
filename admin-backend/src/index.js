@@ -5,6 +5,8 @@ import connectDB from "./config/db.js";
 
 import adminRoutes from "./routes/admin.routes.js";
 import contactRoutes from "./routes/contact.routes.js";
+import packageRoutes from"./routes/packageRoutes.js";
+
 
 dotenv.config();
 connectDB();
@@ -17,6 +19,8 @@ app.use(express.json());
 app.use("/api/admin", adminRoutes);
 
 app.use("/api/contact", contactRoutes);
+app.use("/api/packages", packageRoutes);
+
 
 app.get("/", (req, res) => {
     res.send("Admin backend running 🚀");

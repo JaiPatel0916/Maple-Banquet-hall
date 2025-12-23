@@ -54,6 +54,16 @@ const AdminLayout = () => {
                     </p>
                 </div>
             </div>
+            <div
+                onClick={() => navigate("/dashboard/packages")}
+                className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg transition"
+            >
+                <h2 className="text-lg font-semibold">Packages</h2>
+                <p className="text-sm text-gray-600">
+                    Add / Edit banquet packages
+                </p>
+            </div>
+
 
             {/* PAGE CONTENT */}
             <div className="bg-white rounded shadow p-6">

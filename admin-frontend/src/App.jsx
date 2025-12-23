@@ -3,6 +3,8 @@ import Login from "./pages/Login";
 import ContactBookings from "./pages/ContactBookings";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminLayout from "./layouts/AdminLayout";
+import PackagesAdmin from "./pages/PackagesAdmin";
+
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
 
           <Route path="catering" element={<p>Catering admin coming next</p>} />
           <Route path="stats" element={<p>Stats coming next</p>} />
+           <Route path="packages" element={<PackagesAdmin />} />
         </Route>
 
 
