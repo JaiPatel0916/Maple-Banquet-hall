@@ -9,10 +9,8 @@ import { protectAdmin } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
-/* PUBLIC */
-router.post("/", createContact);
 
-/* ADMIN */
+router.post("/", createContact);
 router.get("/admin", protectAdmin, getAllContacts);
 router.patch("/admin/:id/status", protectAdmin, updateContactStatus);
 router.delete("/admin/:id", protectAdmin, deleteContact);

@@ -7,21 +7,31 @@ const MenuCard = ({ item, selected, onToggle }) => {
                     : "border-gray-200 hover:shadow-sm"
                 }`}
         >
-          
-            <img
-                src={item.image}
-                alt={item.name}
-                className="h-32 sm:h-36 w-full object-cover"
-            />
+            <div className="h-32 sm:h-36 w-full bg-gray-100 flex items-center justify-center">
+                <img
+                    src={item.image}
+                    alt={item.name}
+                    className="max-h-full max-w-full object-contain"
+                />
+            </div>
+
+
 
             <div className="p-3 text-center">
                 <h4 className="text-sm font-medium leading-snug">
                     {item.name}
                 </h4>
 
-                <span className="block text-[11px] mt-0.5 text-green-600">
+                <span
+                    className={`block text-[11px] mt-0.5 font-medium
+        ${item.type === "Veg"
+                            ? "text-green-600"
+                            : "text-red-600"
+                        }`}
+                >
                     {item.type}
                 </span>
+
 
                 <button
                     onClick={onToggle}

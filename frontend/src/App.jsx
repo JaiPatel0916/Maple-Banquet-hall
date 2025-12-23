@@ -11,6 +11,7 @@ import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Founder from "./pages/FounderDetails";
 import ScrollToTop from "./components/ScrollToTop";
+// import { Toaster } from "react-hot-toast";
 
 
 
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <>
+      {/* <Toaster position="top-right" /> */}
       <Navbar />
       <ScrollToTop />
       <Routes>

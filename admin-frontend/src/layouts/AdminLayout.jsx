@@ -22,37 +22,48 @@ const AdminLayout = () => {
                 </button>
             </div>
 
-            {/* DASHBOARD CARDS (ALWAYS VISIBLE) */}
+            {/* DASHBOARD CARDS */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                 <div
                     onClick={() => navigate("/dashboard/contacts")}
-                    className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg transition"
+                    className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg"
                 >
                     <h2 className="text-lg font-semibold">Contact Messages</h2>
-                    <p className="text-sm text-gray-600">
-                        View & manage inquiries
-                    </p>
+                    <p className="text-sm text-gray-600">View & manage inquiries</p>
                 </div>
 
                 <div
-                    onClick={() => navigate("/dashboard/catering")}
-                    className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg transition"
+                    onClick={() => navigate("/dashboard/menu")}
+                    className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg"
                 >
                     <h2 className="text-lg font-semibold">Outdoor Catering</h2>
+                    <p className="text-sm text-gray-600">Manage menu</p>
+                </div>
+                <div
+                    onClick={() => navigate("/dashboard/gallery")}
+                    className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg"
+                >
+                    <h2 className="text-lg font-semibold">Gallery</h2>
+                    <p className="text-sm text-gray-600">Manage gallery images</p>
+                </div>
+                <div
+                    onClick={() => navigate("/dashboard/popup")}
+                    className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg"
+                >
+                    <h2 className="text-lg font-semibold">Popup Manager</h2>
                     <p className="text-sm text-gray-600">
-                        Manage menu & requests
+                        Manage website popups
                     </p>
                 </div>
 
+{/* 
                 <div
                     onClick={() => navigate("/dashboard/stats")}
-                    className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg transition"
+                    className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg"
                 >
                     <h2 className="text-lg font-semibold">Stats</h2>
-                    <p className="text-sm text-gray-600">
-                        View analytics
-                    </p>
-                </div>
+                    <p className="text-sm text-gray-600">Analytics</p>
+                </div> */}
             </div>
             <div
                 onClick={() => navigate("/dashboard/packages")}
@@ -65,7 +76,7 @@ const AdminLayout = () => {
             </div>
 
 
-            {/* PAGE CONTENT */}
+          
             <div className="bg-white rounded shadow p-6">
                 <Outlet />
             </div>
