@@ -22,7 +22,7 @@ function App() {
             </ProtectedRoute>
           }
         >
-          <Route index element={<DashboardHome />} />
+          <Route index element={<ContactBookings />} />
 
           <Route path="contacts" element={<ContactBookings />} />
           <Route path="menu" element={<MenuManagement />} />
