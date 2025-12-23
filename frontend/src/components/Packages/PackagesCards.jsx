@@ -31,7 +31,7 @@ const PackagesCards = () => {
   /* ================= CATEGORY COLORS ================= */
   const badgeColor = (cat) => {
     if (cat === "silver") return "bg-blue-100 text-blue-800";
-    if (cat === "gold") return "bg-yellow-100 text-yellow-800";
+    if (cat === "golden") return "bg-yellow-100 text-yellow-800";
     return "bg-[#8b5a2b] text-white"; // platinum
   };
 
@@ -52,7 +52,7 @@ const PackagesCards = () => {
       <div className="flex justify-center gap-4 mb-12 flex-wrap">
         {[
           { key: "silver", label: "Silver" },
-          { key: "gold", label: "Gold" },
+          { key: "golden", label: "Golden " },
           { key: "platinum", label: "Platinum" },
           { key: "popular", label: "⭐ Most Popular" },
         ].map((item) => (
