@@ -5,8 +5,12 @@ import MenuManagement from "./pages/MenuManagement";
 import DashboardHome from "./pages/DashboardHome";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminLayout from "./layouts/AdminLayout";
+
+import PackagesAdmin from "./pages/PackagesAdmin";
+
 import GalleryManagement from "./pages/GalleryManagement";
 import PopupManager from "./pages/PopupManager";
+
 
 function App() {
   return (
@@ -28,6 +32,12 @@ function App() {
           <Route path="menu" element={<MenuManagement />} />
           <Route path="gallery" element={<GalleryManagement />} />
           <Route path="popup" element={<PopupManager />} />
+
+
+          <Route path="catering" element={<p>Catering admin coming next</p>} />
+          <Route path="stats" element={<p>Stats coming next</p>} />
+           <Route path="packages" element={<PackagesAdmin />} />
+        </Route>
 
 
         </Route>
