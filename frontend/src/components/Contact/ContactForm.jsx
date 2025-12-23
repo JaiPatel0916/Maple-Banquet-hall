@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { toast } from "react-toastify";
 
-const usedDates = ["2025-01-20", "2025-01-25", "2025-02-05"];
+
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ const ContactSection = () => {
       today.setHours(0, 0, 0, 0);
 
       if (selectedDate <today) newErrors.date = "past";
-      if (usedDates.includes(formData.date)) newErrors.date = "booked";
+      // if (usedDates.includes(formData.date)) newErrors.date = "booked";
     }
 
   
@@ -78,9 +79,8 @@ const ContactSection = () => {
         return;
       }
 
-      alert("Inquiry sent successfully!");
+      toast.success("Inquiry sent successfully!");
 
-   
       setFormData({
         name: "",
         email: "",
@@ -90,8 +90,10 @@ const ContactSection = () => {
         guests: "",
         message: "",
       });
-    } catch (error) {
-      alert("Server error. Please try again later.");
+
+      setErrors({});
+    } catch (err) {
+      toast.error("Something went wrong. Please try again.");
     }
   };
 
@@ -121,7 +123,7 @@ const ContactSection = () => {
           </p>
 
           <div className="space-y-6">
-            <Info icon={<Phone size={18} />} title="Phone" value="9579187450" />
+            <Info icon={<Phone size={18} />} title="Phone" value="9579187450, 8600149177" />
             <Info icon={<Mail size={18} />} title="Email" value="info@maplebanquet.com" />
             <Info
               icon={<MapPin size={18} />}
@@ -148,30 +150,37 @@ const ContactSection = () => {
             <div className="grid md:grid-cols-2 gap-4">
               <Input
                 name="name"
+                value={formData.name}
                 placeholder="Your Name *"
                 onChange={handleChange}
                 error={errors.name}
               />
+
               <Input
                 name="email"
+                value={formData.email}
                 placeholder="Email Address"
                 onChange={handleChange}
                 error={errors.email}
               />
+
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
               <Input
                 name="phone"
+                value={formData.phone}
                 placeholder="WhatsApp Number *"
                 onChange={handleChange}
                 error={errors.phone}
               />
+
               <input
                 name="date"
                 type="date"
-                min={minDate}      // ❌ blocks past dates
-                max={maxDate}      // ❌ blocks dates beyond 1 year
+                value={formData.date}
+                min={minDate}
+                max={maxDate}
                 onChange={handleChange}
                 className={`w-full border-b px-2 py-3 focus:outline-none ${errors.date ? "border-red-500" : "border-[#d8cfc4]"
                   }`}
@@ -196,9 +205,11 @@ const ContactSection = () => {
             <div className="grid md:grid-cols-2 gap-4">
               <select
                 name="eventType"
+                value={formData.eventType}
                 onChange={handleChange}
                 className="w-full border-b border-[#d8cfc4] px-2 py-3 bg-transparent"
               >
+
                 <option value="">Select Event Type</option>
               
                 <option>Corporate Event</option>
@@ -209,14 +220,14 @@ const ContactSection = () => {
                 <option>Family Reunions</option>
                  <option>Wedding</option>
               </select>
-
               <select
                 name="guests"
+                value={formData.guests}
                 onChange={handleChange}
-                className={`w-full border-b px-2 py-3 bg-transparent ${
-                  errors.guests ? "border-red-500" : "border-[#d8cfc4]"
-                }`}
+                className={`w-full border-b px-2 py-3 bg-transparent ${errors.guests ? "border-red-500" : "border-[#d8cfc4]"
+                  }`}
               >
+
                 <option value="">Expected Guests *</option>
                 <option>10 – 15</option>
                 <option>16 – 50</option>
@@ -224,14 +235,15 @@ const ContactSection = () => {
                 <option>100+</option>
               </select>
             </div>
-
             <textarea
               name="message"
               rows="4"
+              value={formData.message}
               placeholder="Tell us more about your event requirements..."
               onChange={handleChange}
               className="w-full border-b border-[#d8cfc4] px-2 py-3"
             />
+
 
             <motion.button
               whileHover={{ scale: 1.03 }}

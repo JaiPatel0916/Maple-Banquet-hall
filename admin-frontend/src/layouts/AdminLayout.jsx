@@ -56,14 +56,14 @@ const AdminLayout = () => {
                     </p>
                 </div>
 
-
+{/* 
                 <div
                     onClick={() => navigate("/dashboard/stats")}
                     className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg"
                 >
                     <h2 className="text-lg font-semibold">Stats</h2>
                     <p className="text-sm text-gray-600">Analytics</p>
-                </div>
+                </div> */}
             </div>
 
           
