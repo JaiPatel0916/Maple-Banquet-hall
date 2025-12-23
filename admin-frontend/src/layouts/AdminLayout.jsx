@@ -47,6 +47,15 @@ const AdminLayout = () => {
                     <p className="text-sm text-gray-600">Manage gallery images</p>
                 </div>
                 <div
+                    onClick={() => navigate("/dashboard/packages")}
+                    className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg"
+                >
+                    <h2 className="text-lg font-semibold">Packages Manager</h2>
+                    <p className="text-sm text-gray-600">
+                        Add / Edit banquet packages
+                    </p>
+                </div>
+                <div
                     onClick={() => navigate("/dashboard/popup")}
                     className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg"
                 >
@@ -65,16 +74,7 @@ const AdminLayout = () => {
                     <p className="text-sm text-gray-600">Analytics</p>
                 </div> */}
             </div>
-            <div
-                onClick={() => navigate("/dashboard/packages")}
-                className="bg-white p-6 rounded shadow cursor-pointer hover:shadow-lg transition"
-            >
-                <h2 className="text-lg font-semibold">Packages</h2>
-                <p className="text-sm text-gray-600">
-                    Add / Edit banquet packages
-                </p>
-            </div>
-
+           
 
           
             <div className="bg-white rounded shadow p-6">

@@ -40,12 +40,11 @@ function App() {
         </Route>
 
 
-        </Route>
 
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>
-  );
+  );    
 }
 
 export default App;
