@@ -172,6 +172,7 @@ const removeFeature = (i) => {
         >
           <Plus size={16} /> Add Package
         </button>
+        
       </div>
 
       {/* ================= FORM ================= */}
@@ -252,6 +253,7 @@ const removeFeature = (i) => {
             >
               + Add Feature
             </button>
+            
           </div>
 
           {/* CATEGORY */}
@@ -289,8 +291,8 @@ const removeFeature = (i) => {
   >
     {editingId ? "Update Package" : "Add Package"}
   </button>
-
-  {editingId && (
+          
+  
     <button
       type="button"
       onClick={() => {
@@ -311,7 +313,7 @@ const removeFeature = (i) => {
     >
       Back
     </button>
-  )}
+  
 </div>
 
         </form>
