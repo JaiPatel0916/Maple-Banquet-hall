@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { FiCheck } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const PackagesCards = () => {
   const [packages, setPackages] = useState([]);
@@ -134,13 +135,13 @@ const PackagesCards = () => {
               </ul>
 
               {/* CTA */}
-              <button
+              <Link to="/contact"
                 className="mt-auto w-full py-3 rounded-lg font-semibold mt-10
                   bg-[#d29922] text-black hover:bg-[#c08a16]
-                  transition-all duration-300"
+                  transition-all duration-300 flex items-center justify-center"
               >
                 Book Now
-              </button>
+           </Link>
             </div>
           );
         })}
