@@ -59,6 +59,9 @@ const removeFeature = (i) => {
   });
 };
 
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   /* ================= INPUT ================= */
   const handleSubmit = async (e) => {
@@ -138,6 +141,7 @@ const removeFeature = (i) => {
       isPopular: pkg.isPopular,
     });
     setShowForm(true);
+    scrollTop();
   };
 
   const handleDelete = async (id) => {
@@ -150,7 +154,7 @@ const removeFeature = (i) => {
   const categoryBadge = (category) => {
     if (category === "silver")
       return "bg-blue-100 text-blue-800 border border-blue-200";
-    if (category === "gold")
+    if (category === "golden")
       return "bg-yellow-100 text-yellow-800 border border-yellow-200";
     return "bg-[#8b5a2b] text-white border border-[#6f3f1d]";
   };
@@ -252,7 +256,7 @@ const removeFeature = (i) => {
 
           {/* CATEGORY */}
           <div className="flex gap-6 text-sm font-semibold">
-            {["silver", "gold", "platinum"].map((c) => (
+            {["silver", "golden", "platinum"].map((c) => (
               <label key={c} className="flex gap-2 items-center">
                 <input
                   type="radio"
