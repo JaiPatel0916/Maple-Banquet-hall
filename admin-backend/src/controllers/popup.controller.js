@@ -1,7 +1,7 @@
 import Popup from "../models/Popup.js";
 import PopupSettings from "../models/PopupSettings.js";
 
-/* ENSURE SETTINGS EXISTS */
+
 const ensureSettings = async () => {
     let settings = await PopupSettings.findOne();
     if (!settings) {
@@ -10,7 +10,6 @@ const ensureSettings = async () => {
     return settings;
 };
 
-/* PUBLIC: GET ACTIVE POPUPS */
 export const getPublicPopups = async (req, res) => {
     const settings = await ensureSettings();
 
@@ -18,33 +17,55 @@ export const getPublicPopups = async (req, res) => {
         return res.json([]);
     }
 
-    const popups = await Popup.find({ isActive: true })
-        .sort({ createdAt: -1 });
+    const popup = await Popup.findOne({
+        isActive: true,
+        isDeleted: false,
+    }).sort({ createdAt: -1 });
 
-    res.json(popups);
+    res.json(popup ? [popup] : []);
 };
 
-/* ADMIN: GET ALL */
+
+
 export const getAdminPopups = async (req, res) => {
-    const popups = await Popup.find().sort({ createdAt: -1 });
     const settings = await ensureSettings();
-    res.json({ popups, settings });
+
+    const active = await Popup.find({
+        isDeleted: false,
+        isActive: true,
+    });
+
+    const trash = await Popup.find({
+        isDeleted: true,
+    }).sort({ createdAt: -1 });
+
+    res.json({
+        active,
+        trash,
+        settings,
+    });
 };
 
-/* ADMIN: CREATE */
 export const createPopup = async (req, res) => {
     if (!req.file) {
         return res.status(400).json({ message: "Image required" });
     }
 
+    await Popup.updateMany(
+        { isActive: true, isDeleted: false },
+        { isActive: false, isDeleted: true }
+    );
+
+
     const popup = await Popup.create({
         image: req.file.path,
+        isActive: true,
     });
 
     res.status(201).json(popup);
 };
 
-/* ADMIN: TOGGLE ACTIVE */
+
 export const togglePopup = async (req, res) => {
     const popup = await Popup.findById(req.params.id);
     if (!popup) {
@@ -57,16 +78,47 @@ export const togglePopup = async (req, res) => {
     res.json(popup);
 };
 
-/* ADMIN: DELETE */
+
 export const deletePopup = async (req, res) => {
-    await Popup.findByIdAndDelete(req.params.id);
-    res.json({ message: "Popup deleted" });
+    const popup = await Popup.findById(req.params.id);
+    if (!popup) return res.status(404).json({ message: "Popup not found" });
+
+    popup.isActive = false;
+    popup.isDeleted = true;
+    await popup.save();
+
+    res.json({ message: "Moved to trash" });
 };
 
-/* ADMIN: TOGGLE FEATURE */
+
 export const togglePopupFeature = async (req, res) => {
     const settings = await ensureSettings();
     settings.enabled = !settings.enabled;
     await settings.save();
     res.json(settings);
+};
+
+
+export const restorePopup = async (req, res) => {
+    
+    await Popup.updateMany(
+        { isActive: true, isDeleted: false },
+        { isActive: false, isDeleted: true }
+    );
+
+    const popup = await Popup.findById(req.params.id);
+    if (!popup) {
+        return res.status(404).json({ message: "Popup not found" });
+    }
+
+    popup.isDeleted = false;
+    popup.isActive = true;
+    await popup.save();
+
+    res.json(popup);
+};
+
+export const hardDeletePopup = async (req, res) => {
+    await Popup.findByIdAndDelete(req.params.id);
+    res.json({ message: "Popup permanently deleted" });
 };

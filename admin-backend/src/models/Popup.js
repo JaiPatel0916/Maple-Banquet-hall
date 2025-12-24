@@ -4,11 +4,15 @@ const popupSchema = new mongoose.Schema(
     {
         image: {
             type: String,
-            required: true, // Cloudinary URL
+            required: true,
         },
         isActive: {
             type: Boolean,
-            default: true,
+            default: false,
+        },
+        isDeleted: {
+            type: Boolean,
+            default: false, 
         },
     },
     { timestamps: true }

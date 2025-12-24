@@ -88,8 +88,8 @@ const ContactBookings = () => {
                 >
                     <option value="all">All</option>
                     <option value="today">Today</option>
-                    <option value="7days">Last 7 Days</option>
-                    <option value="month">This Month</option>
+                    {/* <option value="7days">Last 7 Days</option>
+                    <option value="month">This Month</option> */}
                     <option value="custom">Custom Range</option>
                 </select>
 
