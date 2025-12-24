@@ -1,32 +1,53 @@
-import express from "express";
-import upload from "../middleware/upload.js";
-import { protectAdmin } from "../middleware/auth.middleware.js";
-import {
-    getPublicPopups,
-    getAdminPopups,
-    createPopup,
-    togglePopup,
-    deletePopup,
-    togglePopupFeature,
-} from "../controllers/popup.controller.js";
+    import express from "express";
+    import uploadPopup from "../middleware/uploadPopup.js";
+    import { protectAdmin } from "../middleware/auth.middleware.js";
+    import {
+        getPublicPopups,
+        getAdminPopups,
+        createPopup,
+        deletePopup,
+        togglePopupFeature,
+        restorePopup,
+        hardDeletePopup,
+    } from "../controllers/popup.controller.js";
 
-const router = express.Router();
+    const router = express.Router(); // ✅ THIS WAS MISSING
 
+    /* PUBLIC */
+    router.get("/", getPublicPopups);
 
-router.get("/", getPublicPopups);
+    /* ADMIN */
+    router.get("/admin", protectAdmin, getAdminPopups);
 
+    router.post(
+        "/admin",
+        protectAdmin,
+        uploadPopup.single("image"),
+        createPopup
+    );
 
-router.get("/admin", protectAdmin, getAdminPopups);
-router.post("/admin", protectAdmin, upload.single("image"), createPopup);
+    router.patch(
+        "/admin/settings/toggle",
+        protectAdmin,
+        togglePopupFeature
+    );
 
+    router.patch(
+        "/admin/:id/restore",
+        protectAdmin,
+        restorePopup
+    );
 
-router.patch(
-    "/admin/settings/toggle",
-    protectAdmin,
-    togglePopupFeature
-);
+    router.delete(
+        "/admin/:id/hard",
+        protectAdmin,
+        hardDeletePopup
+    );
 
-router.patch("/admin/:id/toggle", protectAdmin, togglePopup);
-router.delete("/admin/:id", protectAdmin, deletePopup);
+    router.delete(
+        "/admin/:id",
+        protectAdmin,
+        deletePopup
+    );
 
-export default router;
+    export default router;
