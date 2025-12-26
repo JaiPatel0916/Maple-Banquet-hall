@@ -4,7 +4,7 @@ import founder2 from "../../assets/images/founder.jpg";
 
 const FounderPreview = () => {
     return (
-        <section className="py-24 bg-white">
+        <section className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-6 text-center">
 
                 {/* Section Label */}
@@ -13,10 +13,16 @@ const FounderPreview = () => {
                 </p>
 
                 {/* Heading */}
-                <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-16">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-10">
                     The Visionaries Behind{" "}
                     <span className="text-[#D29922]">Maple Banquet</span>
                 </h2>
+                <p className="max-w-3xl mx-auto mb-10 text-center text-gray-600 text-sm md:text-base leading-relaxed">
+                    Built on <span className="text-[#D29922] font-semibold">50 years of collective global hospitality expertise</span>,
+                    the founders of CHEFIN Hospitalities & Catering Services bring together international training,
+                    leadership, and an uncompromising commitment to excellence.
+                </p>
+
 
                 {/* Founders Grid */}
                 <div className="grid gap-16 md:grid-cols-2 justify-center">
@@ -33,12 +39,12 @@ const FounderPreview = () => {
                             Mr. Rajesh Sharma
                         </h3>
 
-                        {/* <p className="text-[#D29922] mt-1 mb-3">
-                            Managing Director
-                        </p> */}
+                        <p className="text-[#D29922] mt-1 mb-3">
+                            The Global Executive Chef 
+                        </p>
 
                         <p className="text-gray-600 text-sm max-w-sm mb-6">
-                            15+ years of hospitality experience, driving Maple Banquet’s
+                            25+ years of hospitality experience, driving Maple Banquet’s
                             vision of excellence.
                         </p>
 
@@ -62,9 +68,9 @@ const FounderPreview = () => {
                             Mr. Vikram Sharma
                         </h3>
 
-                        {/* <p className="text-[#D29922] mt-1 mb-3">
-                            Director of Operations
-                        </p> */}
+                        <p className="text-[#D29922] mt-1 mb-3">
+                            The Beverage & Service Expert
+                        </p>
 
                         <p className="text-gray-600 text-sm max-w-sm mb-6">
                             Ensuring flawless execution and extraordinary guest
