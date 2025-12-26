@@ -22,15 +22,14 @@ const services = [
   { title: "Kitty Parties", image: partyImg, link: "/services" },
 ];
 
-// 🔁 clone for infinite effect
-const extendedServices = [...services, ...services];
+const extendedServices = [...services, ...services, ...services];
 
 export default function ServicesSection() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(services.length);
   const [isMobile, setIsMobile] = useState(false);
   const [enableTransition, setEnableTransition] = useState(true);
 
-  // responsive check
+
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
     check();
@@ -40,35 +39,33 @@ export default function ServicesSection() {
 
   const cardsPerView = isMobile ? 1 : 3;
 
-  // 👉 NEXT (Right Arrow)
+ 
   const next = () => {
     setEnableTransition(true);
     setIndex((prev) => prev + 1);
   };
 
-  // 👉 PREV (Left Arrow)
+
   const prev = () => {
     setEnableTransition(true);
-
-    if (index === 0) {
-      // jump to cloned last smoothly
-      setEnableTransition(false);
-      setIndex(services.length);
-      setTimeout(() => {
-        setEnableTransition(true);
-        setIndex(services.length - 1);
-      }, 0);
-    } else {
-      setIndex((prev) => prev - 1);
-    }
+    setIndex((prev) => prev - 1);
   };
 
-  // 🔁 seamless reset when reaching clone end
+  
   useEffect(() => {
-    if (index === services.length) {
+   
+    if (index === services.length * 2) {
       setTimeout(() => {
         setEnableTransition(false);
-        setIndex(0);
+        setIndex(services.length);
+      }, 500);
+    }
+
+
+    if (index === services.length - 1) {
+      setTimeout(() => {
+        setEnableTransition(false);
+        setIndex(services.length * 2 - 1);
       }, 500);
     }
   }, [index]);
@@ -77,7 +74,7 @@ export default function ServicesSection() {
     <section className="bg-white py-14 xl:py-16 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* HEADER */}
+    
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-[#d4a43c]">
@@ -117,7 +114,9 @@ export default function ServicesSection() {
           <div className="overflow-hidden">
             <div
               className={`flex ${
-                enableTransition ? "transition-transform duration-500 ease-in-out" : ""
+                enableTransition
+                  ? "transition-transform duration-500 ease-in-out"
+                  : ""
               }`}
               style={{
                 transform: `translateX(-${(index * 100) / cardsPerView}%)`,
