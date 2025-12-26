@@ -27,7 +27,7 @@ const values = [
 
 const AboutValues = () => {
     return (
-        <section className="bg-[#f3ece5] py-4">
+        <section className="bg-[#f3ece5] py-20">
             {/* Heading */}
             <div className="text-center mb-16 px-4">
                 <p className="text-sm tracking-widest text-[#b28a3b] font-semibold mb-2">

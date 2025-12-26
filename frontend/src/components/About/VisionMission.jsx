@@ -2,7 +2,7 @@ import { Eye, Target } from "lucide-react";
 
 const VisionMission = () => {
     return (
-        <section className="bg-[#f9f6ef] py-28 px-4">
+        <section className="bg-[#f9f6ef] py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
 
              
