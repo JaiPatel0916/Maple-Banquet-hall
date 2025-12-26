@@ -27,11 +27,14 @@ const VisionMission = () => {
                             Our Vision
                         </h3>
 
-                        <p className="text-gray-600 leading-relaxed text-justify-left">
-                            To be the most trusted and celebrated banquet venue in Nagpur,
-                            known for transforming every celebration into an extraordinary
-                            experience that exceeds expectations and creates lasting
-                            memories for generations to come.
+                        <p className="text-gray-600 leading-relaxed text-justify">
+                            CHEF IN Hospitalities aims to elevate events in Nagpur 
+                            by delivering global-standard food and professional 
+                            service with a personal touch. Backed by decades of 
+                            hospitality experience, we focus on chef-crafted cuisine,
+                            customized menus, and exceptional service, while maintaining
+                            the highest standards of quality, hygiene, and guest satisfaction 
+                            to create memorable event experiences.
                         </p>
                     </div>
 
