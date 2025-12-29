@@ -8,7 +8,7 @@ const PackagesCards = () => {
   const [selected, setSelected] = useState("silver");
 
   useEffect(() => {
-    axios.get("http://localhost:5001/api/packages").then((res) => {
+    axios.get("https://maple-banquet-hall.vercel.app/api/packages").then((res) => {
       setPackages(res.data);
     });
   }, []);
