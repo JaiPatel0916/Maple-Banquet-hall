@@ -5,7 +5,7 @@ import connectDB from "./config/db.js";
 import adminRoutes from "./routes/admin.routes.js";
 import contactRoutes from "./routes/contact.routes.js";
 
-import packageRoutes from"./routes/packageRoutes.js";
+import packageRoutes from"./routes/package.routes.js";
 
 
 import menuRoutes from "./routes/menu.routes.js";
