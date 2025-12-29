@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Pencil, Trash2, Plus } from "lucide-react";
 
 
-const API = "http://localhost:5001/api/packages";
+const API = "https://maple-banquet-hall.vercel.app/api/packages";
 
 const AdminPackages = () => {
   const [packages, setPackages] = useState([]);
