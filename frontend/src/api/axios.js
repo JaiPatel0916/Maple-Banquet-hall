@@ -1,12 +1,13 @@
 import axios from "axios";
 
-const BASE_URL =
-    window.location.hostname === "localhost"
-        ? "http://localhost:5001/api"
-        : "https://maple-banquet-hall.vercel.app/api";
+const isLocal =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1";
 
 const api = axios.create({
-    baseURL: BASE_URL,
+    baseURL: isLocal
+        ? "http://localhost:5001/api"
+        : "https://maple-banquet-hall.vercel.app/api",
 });
 
-export default api; // ✅ keep default export
+export default api;
