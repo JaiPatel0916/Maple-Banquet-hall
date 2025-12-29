@@ -51,6 +51,7 @@ const FounderProfile = ({ founderId }) => {
                     <p className="text-sm tracking-widest text-[#D29922] mb-2">
                         MEET OUR FOUNDER
                     </p>
+                    
 
                     <h2 className="text-4xl font-serif font-semibold mb-3">
                         {founder.name}
