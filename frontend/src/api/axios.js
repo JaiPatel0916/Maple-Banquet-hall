@@ -1,7 +1,7 @@
-import axios from "axios";
+const isLocal = window.location.hostname === "localhost";
 
 const api = axios.create({
-    baseURL: "http://localhost:5001/api",
+    baseURL: isLocal
+        ? "http://localhost:5001/api"
+        : "https://maple-banquet-hall.vercel.app/api",
 });
-
-export default api;
