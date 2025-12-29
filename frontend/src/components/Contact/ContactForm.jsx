@@ -62,7 +62,7 @@ const ContactSection = () => {
 
     try {
       const res = await fetch(
-        "http://localhost:5001/api/contact",
+        "https://maple-banquet-hall.vercel.app/api/contact",
         {
           method: "POST",
           headers: {
