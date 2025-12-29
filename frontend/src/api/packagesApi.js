@@ -1,10 +1,6 @@
-const BASE_URL =
-  window.location.hostname === "localhost"
-    ? "http://localhost:5001/api"
-    : "https://maple-banquet-hall.vercel.app/api";
+import api from "./axios";
 
 export const getPackages = async () => {
-  const res = await fetch(`${BASE_URL}/packages`);
-  if (!res.ok) throw new Error("Failed to fetch packages");
-  return res.json();
+  const res = await api.get("/packages");
+  return res.data;
 };
