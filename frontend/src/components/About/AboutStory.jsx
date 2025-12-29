@@ -1,6 +1,6 @@
 
 import { FiCheckCircle } from "react-icons/fi";
-import AboutImage from "../../assets/images/hall.jpg";
+import AboutImage from "../../assets/images/hall.jpeg";
 
 
 const AboutStory = () => {
